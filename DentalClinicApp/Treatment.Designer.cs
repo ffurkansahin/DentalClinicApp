@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Treatment));
             panel1 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            treatmentLeftMenuLogoutClickLabel = new Label();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
+            treatmentLeftMenuDashboardClickLabel = new Label();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
+            treatmentLeftMenuUserClickLabel = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
+            treatmentLeftMenuAppointmentClickLabel = new Label();
             pictureBox1 = new PictureBox();
+            treatmentLeftMenuHeaderLabel = new Label();
+            treatmentLeftMenuPrescriptionClickLabel = new Label();
+            treatmentLeftMenuSubHeader = new Label();
+            treatmentLeftMenuPatientClickLabel = new Label();
             panel2 = new Panel();
+            treatmentSaveButton = new Button();
+            treatmentCostTextBox = new TextBox();
+            treatmentDescriptionTextBox = new TextBox();
+            treatmentNameTextBox = new TextBox();
+            treatmentCostLabel = new Label();
+            treatmentDescriptionLabel = new Label();
+            treatmentNameLabel = new Label();
             label9 = new Label();
-            textBox2 = new TextBox();
-            label10 = new Label();
-            label14 = new Label();
-            textBox1 = new TextBox();
-            label11 = new Label();
-            textBox3 = new TextBox();
-            button1 = new Button();
             dataGridView1 = new DataGridView();
             label16 = new Label();
             panel1.SuspendLayout();
@@ -70,115 +70,38 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkMagenta;
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.BackColor = Color.Aquamarine;
+            panel1.Controls.Add(treatmentLeftMenuLogoutClickLabel);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox6);
+            panel1.Controls.Add(treatmentLeftMenuDashboardClickLabel);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(treatmentLeftMenuUserClickLabel);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(treatmentLeftMenuAppointmentClickLabel);
             panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(treatmentLeftMenuHeaderLabel);
+            panel1.Controls.Add(treatmentLeftMenuPrescriptionClickLabel);
+            panel1.Controls.Add(treatmentLeftMenuSubHeader);
+            panel1.Controls.Add(treatmentLeftMenuPatientClickLabel);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(182, 600);
             panel1.TabIndex = 1;
             // 
-            // label8
+            // treatmentLeftMenuLogoutClickLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(57, 469);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 25);
-            label8.TabIndex = 4;
-            label8.Text = "Logout";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(57, 395);
-            label7.Name = "label7";
-            label7.Size = new Size(105, 25);
-            label7.TabIndex = 4;
-            label7.Text = "Dashboard";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(57, 321);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 25);
-            label5.TabIndex = 4;
-            label5.Text = "Users";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(57, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(114, 25);
-            label6.TabIndex = 4;
-            label6.Text = "Prescription";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(57, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Appointment";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(57, 99);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Patient";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(55, 4);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Dental Clinic";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(57, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Treatments";
+            treatmentLeftMenuLogoutClickLabel.AutoSize = true;
+            treatmentLeftMenuLogoutClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuLogoutClickLabel.ForeColor = Color.Black;
+            treatmentLeftMenuLogoutClickLabel.Location = new Point(59, 474);
+            treatmentLeftMenuLogoutClickLabel.Name = "treatmentLeftMenuLogoutClickLabel";
+            treatmentLeftMenuLogoutClickLabel.Size = new Size(72, 25);
+            treatmentLeftMenuLogoutClickLabel.TabIndex = 7;
+            treatmentLeftMenuLogoutClickLabel.Text = "Logout";
             // 
             // pictureBox7
             // 
@@ -200,6 +123,17 @@
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
             // 
+            // treatmentLeftMenuDashboardClickLabel
+            // 
+            treatmentLeftMenuDashboardClickLabel.AutoSize = true;
+            treatmentLeftMenuDashboardClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuDashboardClickLabel.ForeColor = Color.Black;
+            treatmentLeftMenuDashboardClickLabel.Location = new Point(59, 400);
+            treatmentLeftMenuDashboardClickLabel.Name = "treatmentLeftMenuDashboardClickLabel";
+            treatmentLeftMenuDashboardClickLabel.Size = new Size(105, 25);
+            treatmentLeftMenuDashboardClickLabel.TabIndex = 8;
+            treatmentLeftMenuDashboardClickLabel.Text = "Dashboard";
+            // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
@@ -219,6 +153,17 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 2;
             pictureBox5.TabStop = false;
+            // 
+            // treatmentLeftMenuUserClickLabel
+            // 
+            treatmentLeftMenuUserClickLabel.AutoSize = true;
+            treatmentLeftMenuUserClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuUserClickLabel.ForeColor = Color.Black;
+            treatmentLeftMenuUserClickLabel.Location = new Point(59, 326);
+            treatmentLeftMenuUserClickLabel.Name = "treatmentLeftMenuUserClickLabel";
+            treatmentLeftMenuUserClickLabel.Size = new Size(58, 25);
+            treatmentLeftMenuUserClickLabel.TabIndex = 9;
+            treatmentLeftMenuUserClickLabel.Text = "Users";
             // 
             // pictureBox3
             // 
@@ -240,6 +185,17 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
+            // treatmentLeftMenuAppointmentClickLabel
+            // 
+            treatmentLeftMenuAppointmentClickLabel.AutoSize = true;
+            treatmentLeftMenuAppointmentClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuAppointmentClickLabel.ForeColor = Color.Black;
+            treatmentLeftMenuAppointmentClickLabel.Location = new Point(54, 252);
+            treatmentLeftMenuAppointmentClickLabel.Name = "treatmentLeftMenuAppointmentClickLabel";
+            treatmentLeftMenuAppointmentClickLabel.Size = new Size(126, 25);
+            treatmentLeftMenuAppointmentClickLabel.TabIndex = 10;
+            treatmentLeftMenuAppointmentClickLabel.Text = "Appointment";
+            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -250,19 +206,134 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // treatmentLeftMenuHeaderLabel
+            // 
+            treatmentLeftMenuHeaderLabel.AutoSize = true;
+            treatmentLeftMenuHeaderLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuHeaderLabel.ForeColor = Color.Black;
+            treatmentLeftMenuHeaderLabel.Location = new Point(57, 9);
+            treatmentLeftMenuHeaderLabel.Name = "treatmentLeftMenuHeaderLabel";
+            treatmentLeftMenuHeaderLabel.Size = new Size(121, 25);
+            treatmentLeftMenuHeaderLabel.TabIndex = 5;
+            treatmentLeftMenuHeaderLabel.Text = "Dental Clinic";
+            // 
+            // treatmentLeftMenuPrescriptionClickLabel
+            // 
+            treatmentLeftMenuPrescriptionClickLabel.AutoSize = true;
+            treatmentLeftMenuPrescriptionClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuPrescriptionClickLabel.ForeColor = Color.Black;
+            treatmentLeftMenuPrescriptionClickLabel.Location = new Point(59, 178);
+            treatmentLeftMenuPrescriptionClickLabel.Name = "treatmentLeftMenuPrescriptionClickLabel";
+            treatmentLeftMenuPrescriptionClickLabel.Size = new Size(114, 25);
+            treatmentLeftMenuPrescriptionClickLabel.TabIndex = 11;
+            treatmentLeftMenuPrescriptionClickLabel.Text = "Prescription";
+            // 
+            // treatmentLeftMenuSubHeader
+            // 
+            treatmentLeftMenuSubHeader.AutoSize = true;
+            treatmentLeftMenuSubHeader.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuSubHeader.ForeColor = Color.Black;
+            treatmentLeftMenuSubHeader.Location = new Point(59, 34);
+            treatmentLeftMenuSubHeader.Name = "treatmentLeftMenuSubHeader";
+            treatmentLeftMenuSubHeader.Size = new Size(76, 17);
+            treatmentLeftMenuSubHeader.TabIndex = 6;
+            treatmentLeftMenuSubHeader.Text = "Treatments";
+            // 
+            // treatmentLeftMenuPatientClickLabel
+            // 
+            treatmentLeftMenuPatientClickLabel.AutoSize = true;
+            treatmentLeftMenuPatientClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentLeftMenuPatientClickLabel.ForeColor = Color.Black;
+            treatmentLeftMenuPatientClickLabel.Location = new Point(59, 104);
+            treatmentLeftMenuPatientClickLabel.Name = "treatmentLeftMenuPatientClickLabel";
+            treatmentLeftMenuPatientClickLabel.Size = new Size(72, 25);
+            treatmentLeftMenuPatientClickLabel.TabIndex = 12;
+            treatmentLeftMenuPatientClickLabel.Text = "Patient";
+            // 
             // panel2
             // 
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label14);
+            panel2.Controls.Add(treatmentSaveButton);
+            panel2.Controls.Add(treatmentCostTextBox);
+            panel2.Controls.Add(treatmentDescriptionTextBox);
+            panel2.Controls.Add(treatmentNameTextBox);
+            panel2.Controls.Add(treatmentCostLabel);
+            panel2.Controls.Add(treatmentDescriptionLabel);
+            panel2.Controls.Add(treatmentNameLabel);
             panel2.Location = new Point(186, 45);
             panel2.Name = "panel2";
             panel2.Size = new Size(730, 192);
             panel2.TabIndex = 6;
+            // 
+            // treatmentSaveButton
+            // 
+            treatmentSaveButton.BackColor = Color.Aquamarine;
+            treatmentSaveButton.FlatStyle = FlatStyle.Flat;
+            treatmentSaveButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentSaveButton.ForeColor = Color.Black;
+            treatmentSaveButton.Location = new Point(377, 119);
+            treatmentSaveButton.Name = "treatmentSaveButton";
+            treatmentSaveButton.Size = new Size(132, 44);
+            treatmentSaveButton.TabIndex = 3;
+            treatmentSaveButton.Text = "Save";
+            treatmentSaveButton.UseVisualStyleBackColor = false;
+            // 
+            // treatmentCostTextBox
+            // 
+            treatmentCostTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentCostTextBox.Location = new Point(465, 10);
+            treatmentCostTextBox.Name = "treatmentCostTextBox";
+            treatmentCostTextBox.Size = new Size(262, 32);
+            treatmentCostTextBox.TabIndex = 1;
+            // 
+            // treatmentDescriptionTextBox
+            // 
+            treatmentDescriptionTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentDescriptionTextBox.Location = new Point(119, 78);
+            treatmentDescriptionTextBox.Multiline = true;
+            treatmentDescriptionTextBox.Name = "treatmentDescriptionTextBox";
+            treatmentDescriptionTextBox.Size = new Size(189, 85);
+            treatmentDescriptionTextBox.TabIndex = 2;
+            // 
+            // treatmentNameTextBox
+            // 
+            treatmentNameTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentNameTextBox.Location = new Point(119, 10);
+            treatmentNameTextBox.Name = "treatmentNameTextBox";
+            treatmentNameTextBox.Size = new Size(216, 32);
+            treatmentNameTextBox.TabIndex = 0;
+            // 
+            // treatmentCostLabel
+            // 
+            treatmentCostLabel.AutoSize = true;
+            treatmentCostLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentCostLabel.ForeColor = Color.MediumVioletRed;
+            treatmentCostLabel.Location = new Point(377, 13);
+            treatmentCostLabel.Name = "treatmentCostLabel";
+            treatmentCostLabel.Size = new Size(50, 25);
+            treatmentCostLabel.TabIndex = 8;
+            treatmentCostLabel.Text = "Cost";
+            // 
+            // treatmentDescriptionLabel
+            // 
+            treatmentDescriptionLabel.AutoSize = true;
+            treatmentDescriptionLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentDescriptionLabel.ForeColor = Color.MediumVioletRed;
+            treatmentDescriptionLabel.Location = new Point(3, 81);
+            treatmentDescriptionLabel.Name = "treatmentDescriptionLabel";
+            treatmentDescriptionLabel.Size = new Size(110, 25);
+            treatmentDescriptionLabel.TabIndex = 9;
+            treatmentDescriptionLabel.Text = "Description";
+            // 
+            // treatmentNameLabel
+            // 
+            treatmentNameLabel.AutoSize = true;
+            treatmentNameLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentNameLabel.ForeColor = Color.MediumVioletRed;
+            treatmentNameLabel.Location = new Point(3, 13);
+            treatmentNameLabel.Name = "treatmentNameLabel";
+            treatmentNameLabel.Size = new Size(64, 25);
+            treatmentNameLabel.TabIndex = 9;
+            treatmentNameLabel.Text = "Name";
             // 
             // label9
             // 
@@ -274,77 +345,6 @@
             label9.Size = new Size(120, 30);
             label9.TabIndex = 5;
             label9.Text = "Treatments";
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(92, 10);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(216, 32);
-            textBox2.TabIndex = 11;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.MediumVioletRed;
-            label10.Location = new Point(377, 13);
-            label10.Name = "label10";
-            label10.Size = new Size(50, 25);
-            label10.TabIndex = 8;
-            label10.Text = "Cost";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.MediumVioletRed;
-            label14.Location = new Point(3, 13);
-            label14.Name = "label14";
-            label14.Size = new Size(64, 25);
-            label14.TabIndex = 9;
-            label14.Text = "Name";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(465, 10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 32);
-            textBox1.TabIndex = 12;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.MediumVioletRed;
-            label11.Location = new Point(3, 81);
-            label11.Name = "label11";
-            label11.Size = new Size(110, 25);
-            label11.TabIndex = 9;
-            label11.Text = "Description";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(119, 78);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(189, 85);
-            textBox3.TabIndex = 11;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(377, 119);
-            button1.Name = "button1";
-            button1.Size = new Size(132, 44);
-            button1.TabIndex = 13;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -401,14 +401,6 @@
         #endregion
 
         private Panel panel1;
-        private Label label8;
-        private Label label7;
-        private Label label5;
-        private Label label6;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox4;
@@ -418,14 +410,22 @@
         private PictureBox pictureBox1;
         private Panel panel2;
         private Label label9;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private Label label10;
-        private Label label11;
-        private Label label14;
-        private Button button1;
+        private TextBox treatmentCostTextBox;
+        private TextBox treatmentDescriptionTextBox;
+        private TextBox treatmentNameTextBox;
+        private Label treatmentCostLabel;
+        private Label treatmentDescriptionLabel;
+        private Label treatmentNameLabel;
+        private Button treatmentSaveButton;
         private DataGridView dataGridView1;
         private Label label16;
+        private Label treatmentLeftMenuLogoutClickLabel;
+        private Label treatmentLeftMenuDashboardClickLabel;
+        private Label treatmentLeftMenuUserClickLabel;
+        private Label treatmentLeftMenuAppointmentClickLabel;
+        private Label treatmentLeftMenuHeaderLabel;
+        private Label treatmentLeftMenuPrescriptionClickLabel;
+        private Label treatmentLeftMenuSubHeader;
+        private Label treatmentLeftMenuPatientClickLabel;
     }
 }

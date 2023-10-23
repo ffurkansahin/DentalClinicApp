@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient));
             panel1 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            patientLeftMenuLogoutClickLabel = new Label();
+            patientLeftMenuDashboardClickLabel = new Label();
+            patientLeftMenuUserClickLabel = new Label();
+            patientLeftMenuPrescriptionClickLabel = new Label();
+            patientLeftMenuTreatmentClickLabel = new Label();
+            patientLeftMenuAppointmentClickLabel = new Label();
+            patientLeftMenuHeader = new Label();
+            patientLeftMenuSubHeader = new Label();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -47,19 +47,19 @@
             pictureBox1 = new PictureBox();
             label9 = new Label();
             panel2 = new Panel();
-            button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
-            label13 = new Label();
-            label12 = new Label();
-            label14 = new Label();
-            textBox2 = new TextBox();
-            label10 = new Label();
-            textBox1 = new TextBox();
-            label11 = new Label();
-            textBox3 = new TextBox();
-            label15 = new Label();
-            comboBox1 = new ComboBox();
-            textBox4 = new TextBox();
+            patientGenderTextBox = new ComboBox();
+            patientAllergiesTextBox = new TextBox();
+            patientAddressTextBox = new TextBox();
+            patientPhoneTextBox = new TextBox();
+            patientNameTextBox = new TextBox();
+            patientSaveButton = new Button();
+            patientBirthDateTimePicker = new DateTimePicker();
+            patientAllergiesLabel = new Label();
+            patientGenderLabel = new Label();
+            patientBirthDateLabel = new Label();
+            patientAddressLabel = new Label();
+            patientPhoneLabel = new Label();
+            patientNameLabel = new Label();
             dataGridView1 = new DataGridView();
             label16 = new Label();
             panel1.SuspendLayout();
@@ -76,15 +76,15 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkMagenta;
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.BackColor = Color.Aquamarine;
+            panel1.Controls.Add(patientLeftMenuLogoutClickLabel);
+            panel1.Controls.Add(patientLeftMenuDashboardClickLabel);
+            panel1.Controls.Add(patientLeftMenuUserClickLabel);
+            panel1.Controls.Add(patientLeftMenuPrescriptionClickLabel);
+            panel1.Controls.Add(patientLeftMenuTreatmentClickLabel);
+            panel1.Controls.Add(patientLeftMenuAppointmentClickLabel);
+            panel1.Controls.Add(patientLeftMenuHeader);
+            panel1.Controls.Add(patientLeftMenuSubHeader);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
@@ -98,93 +98,93 @@
             panel1.Size = new Size(183, 600);
             panel1.TabIndex = 1;
             // 
-            // label8
+            // patientLeftMenuLogoutClickLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(57, 469);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 25);
-            label8.TabIndex = 4;
-            label8.Text = "Logout";
+            patientLeftMenuLogoutClickLabel.AutoSize = true;
+            patientLeftMenuLogoutClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuLogoutClickLabel.ForeColor = Color.Black;
+            patientLeftMenuLogoutClickLabel.Location = new Point(57, 469);
+            patientLeftMenuLogoutClickLabel.Name = "patientLeftMenuLogoutClickLabel";
+            patientLeftMenuLogoutClickLabel.Size = new Size(72, 25);
+            patientLeftMenuLogoutClickLabel.TabIndex = 4;
+            patientLeftMenuLogoutClickLabel.Text = "Logout";
             // 
-            // label7
+            // patientLeftMenuDashboardClickLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(57, 395);
-            label7.Name = "label7";
-            label7.Size = new Size(105, 25);
-            label7.TabIndex = 4;
-            label7.Text = "Dashboard";
+            patientLeftMenuDashboardClickLabel.AutoSize = true;
+            patientLeftMenuDashboardClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuDashboardClickLabel.ForeColor = Color.Black;
+            patientLeftMenuDashboardClickLabel.Location = new Point(57, 395);
+            patientLeftMenuDashboardClickLabel.Name = "patientLeftMenuDashboardClickLabel";
+            patientLeftMenuDashboardClickLabel.Size = new Size(105, 25);
+            patientLeftMenuDashboardClickLabel.TabIndex = 4;
+            patientLeftMenuDashboardClickLabel.Text = "Dashboard";
             // 
-            // label5
+            // patientLeftMenuUserClickLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(57, 321);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 25);
-            label5.TabIndex = 4;
-            label5.Text = "Users";
+            patientLeftMenuUserClickLabel.AutoSize = true;
+            patientLeftMenuUserClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuUserClickLabel.ForeColor = Color.Black;
+            patientLeftMenuUserClickLabel.Location = new Point(57, 321);
+            patientLeftMenuUserClickLabel.Name = "patientLeftMenuUserClickLabel";
+            patientLeftMenuUserClickLabel.Size = new Size(58, 25);
+            patientLeftMenuUserClickLabel.TabIndex = 4;
+            patientLeftMenuUserClickLabel.Text = "Users";
             // 
-            // label6
+            // patientLeftMenuPrescriptionClickLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(57, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(114, 25);
-            label6.TabIndex = 4;
-            label6.Text = "Prescription";
+            patientLeftMenuPrescriptionClickLabel.AutoSize = true;
+            patientLeftMenuPrescriptionClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuPrescriptionClickLabel.ForeColor = Color.Black;
+            patientLeftMenuPrescriptionClickLabel.Location = new Point(57, 247);
+            patientLeftMenuPrescriptionClickLabel.Name = "patientLeftMenuPrescriptionClickLabel";
+            patientLeftMenuPrescriptionClickLabel.Size = new Size(114, 25);
+            patientLeftMenuPrescriptionClickLabel.TabIndex = 4;
+            patientLeftMenuPrescriptionClickLabel.Text = "Prescription";
             // 
-            // label4
+            // patientLeftMenuTreatmentClickLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(57, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(99, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Treatment";
+            patientLeftMenuTreatmentClickLabel.AutoSize = true;
+            patientLeftMenuTreatmentClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuTreatmentClickLabel.ForeColor = Color.Black;
+            patientLeftMenuTreatmentClickLabel.Location = new Point(57, 173);
+            patientLeftMenuTreatmentClickLabel.Name = "patientLeftMenuTreatmentClickLabel";
+            patientLeftMenuTreatmentClickLabel.Size = new Size(99, 25);
+            patientLeftMenuTreatmentClickLabel.TabIndex = 4;
+            patientLeftMenuTreatmentClickLabel.Text = "Treatment";
             // 
-            // label3
+            // patientLeftMenuAppointmentClickLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(57, 99);
-            label3.Name = "label3";
-            label3.Size = new Size(126, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Appointment";
+            patientLeftMenuAppointmentClickLabel.AutoSize = true;
+            patientLeftMenuAppointmentClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuAppointmentClickLabel.ForeColor = Color.Black;
+            patientLeftMenuAppointmentClickLabel.Location = new Point(54, 99);
+            patientLeftMenuAppointmentClickLabel.Name = "patientLeftMenuAppointmentClickLabel";
+            patientLeftMenuAppointmentClickLabel.Size = new Size(126, 25);
+            patientLeftMenuAppointmentClickLabel.TabIndex = 4;
+            patientLeftMenuAppointmentClickLabel.Text = "Appointment";
             // 
-            // label2
+            // patientLeftMenuHeader
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(55, 4);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Dental Clinic";
+            patientLeftMenuHeader.AutoSize = true;
+            patientLeftMenuHeader.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuHeader.ForeColor = Color.Black;
+            patientLeftMenuHeader.Location = new Point(55, 4);
+            patientLeftMenuHeader.Name = "patientLeftMenuHeader";
+            patientLeftMenuHeader.Size = new Size(121, 25);
+            patientLeftMenuHeader.TabIndex = 3;
+            patientLeftMenuHeader.Text = "Dental Clinic";
             // 
-            // label1
+            // patientLeftMenuSubHeader
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(57, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(57, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Patients";
+            patientLeftMenuSubHeader.AutoSize = true;
+            patientLeftMenuSubHeader.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            patientLeftMenuSubHeader.ForeColor = Color.Black;
+            patientLeftMenuSubHeader.Location = new Point(57, 29);
+            patientLeftMenuSubHeader.Name = "patientLeftMenuSubHeader";
+            patientLeftMenuSubHeader.Size = new Size(57, 17);
+            patientLeftMenuSubHeader.TabIndex = 3;
+            patientLeftMenuSubHeader.Text = "Patients";
             // 
             // pictureBox7
             // 
@@ -269,154 +269,154 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label15);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label14);
+            panel2.Controls.Add(patientGenderTextBox);
+            panel2.Controls.Add(patientAllergiesTextBox);
+            panel2.Controls.Add(patientAddressTextBox);
+            panel2.Controls.Add(patientPhoneTextBox);
+            panel2.Controls.Add(patientNameTextBox);
+            panel2.Controls.Add(patientSaveButton);
+            panel2.Controls.Add(patientBirthDateTimePicker);
+            panel2.Controls.Add(patientAllergiesLabel);
+            panel2.Controls.Add(patientGenderLabel);
+            panel2.Controls.Add(patientBirthDateLabel);
+            panel2.Controls.Add(patientAddressLabel);
+            panel2.Controls.Add(patientPhoneLabel);
+            panel2.Controls.Add(patientNameLabel);
             panel2.Location = new Point(189, 42);
             panel2.Name = "panel2";
             panel2.Size = new Size(730, 192);
             panel2.TabIndex = 5;
             // 
-            // button1
+            // patientGenderTextBox
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(306, 141);
-            button1.Name = "button1";
-            button1.Size = new Size(132, 44);
-            button1.TabIndex = 6;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = false;
+            patientGenderTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientGenderTextBox.FormattingEnabled = true;
+            patientGenderTextBox.Items.AddRange(new object[] { "Male", "Female", "Other" });
+            patientGenderTextBox.Location = new Point(444, 49);
+            patientGenderTextBox.Name = "patientGenderTextBox";
+            patientGenderTextBox.Size = new Size(223, 33);
+            patientGenderTextBox.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // patientAllergiesTextBox
             // 
-            dateTimePicker1.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(444, 10);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(223, 28);
-            dateTimePicker1.TabIndex = 4;
+            patientAllergiesTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientAllergiesTextBox.Location = new Point(444, 91);
+            patientAllergiesTextBox.Multiline = true;
+            patientAllergiesTextBox.Name = "patientAllergiesTextBox";
+            patientAllergiesTextBox.Size = new Size(223, 93);
+            patientAllergiesTextBox.TabIndex = 5;
             // 
-            // label13
+            // patientAddressTextBox
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.ForeColor = Color.MediumVioletRed;
-            label13.Location = new Point(338, 93);
-            label13.Name = "label13";
-            label13.Size = new Size(86, 25);
-            label13.TabIndex = 3;
-            label13.Text = "Allergies";
+            patientAddressTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientAddressTextBox.Location = new Point(92, 92);
+            patientAddressTextBox.Multiline = true;
+            patientAddressTextBox.Name = "patientAddressTextBox";
+            patientAddressTextBox.Size = new Size(159, 93);
+            patientAddressTextBox.TabIndex = 2;
             // 
-            // label12
+            // patientPhoneTextBox
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.MediumVioletRed;
-            label12.Location = new Point(338, 11);
-            label12.Name = "label12";
-            label12.Size = new Size(100, 25);
-            label12.TabIndex = 3;
-            label12.Text = "Birth Date";
+            patientPhoneTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientPhoneTextBox.Location = new Point(92, 48);
+            patientPhoneTextBox.Name = "patientPhoneTextBox";
+            patientPhoneTextBox.Size = new Size(159, 32);
+            patientPhoneTextBox.TabIndex = 1;
             // 
-            // label14
+            // patientNameTextBox
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.MediumVioletRed;
-            label14.Location = new Point(3, 7);
-            label14.Name = "label14";
-            label14.Size = new Size(64, 25);
-            label14.TabIndex = 3;
-            label14.Text = "Name";
+            patientNameTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientNameTextBox.Location = new Point(92, 4);
+            patientNameTextBox.Name = "patientNameTextBox";
+            patientNameTextBox.Size = new Size(159, 32);
+            patientNameTextBox.TabIndex = 0;
             // 
-            // textBox2
+            // patientSaveButton
             // 
-            textBox2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(92, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(159, 32);
-            textBox2.TabIndex = 7;
+            patientSaveButton.BackColor = Color.Aquamarine;
+            patientSaveButton.FlatStyle = FlatStyle.Flat;
+            patientSaveButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            patientSaveButton.ForeColor = Color.Black;
+            patientSaveButton.Location = new Point(306, 141);
+            patientSaveButton.Name = "patientSaveButton";
+            patientSaveButton.Size = new Size(132, 44);
+            patientSaveButton.TabIndex = 6;
+            patientSaveButton.Text = "Save";
+            patientSaveButton.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // patientBirthDateTimePicker
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.MediumVioletRed;
-            label10.Location = new Point(3, 51);
-            label10.Name = "label10";
-            label10.Size = new Size(66, 25);
-            label10.TabIndex = 3;
-            label10.Text = "Phone";
+            patientBirthDateTimePicker.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            patientBirthDateTimePicker.Location = new Point(444, 10);
+            patientBirthDateTimePicker.Name = "patientBirthDateTimePicker";
+            patientBirthDateTimePicker.Size = new Size(223, 28);
+            patientBirthDateTimePicker.TabIndex = 3;
             // 
-            // textBox1
+            // patientAllergiesLabel
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(92, 48);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(159, 32);
-            textBox1.TabIndex = 7;
+            patientAllergiesLabel.AutoSize = true;
+            patientAllergiesLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientAllergiesLabel.ForeColor = Color.MediumVioletRed;
+            patientAllergiesLabel.Location = new Point(338, 93);
+            patientAllergiesLabel.Name = "patientAllergiesLabel";
+            patientAllergiesLabel.Size = new Size(86, 25);
+            patientAllergiesLabel.TabIndex = 3;
+            patientAllergiesLabel.Text = "Allergies";
             // 
-            // label11
+            // patientGenderLabel
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.MediumVioletRed;
-            label11.Location = new Point(3, 94);
-            label11.Name = "label11";
-            label11.Size = new Size(80, 25);
-            label11.TabIndex = 3;
-            label11.Text = "Address";
+            patientGenderLabel.AutoSize = true;
+            patientGenderLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientGenderLabel.ForeColor = Color.MediumVioletRed;
+            patientGenderLabel.Location = new Point(338, 52);
+            patientGenderLabel.Name = "patientGenderLabel";
+            patientGenderLabel.Size = new Size(74, 25);
+            patientGenderLabel.TabIndex = 3;
+            patientGenderLabel.Text = "Gender";
             // 
-            // textBox3
+            // patientBirthDateLabel
             // 
-            textBox3.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(92, 92);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(159, 93);
-            textBox3.TabIndex = 7;
+            patientBirthDateLabel.AutoSize = true;
+            patientBirthDateLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientBirthDateLabel.ForeColor = Color.MediumVioletRed;
+            patientBirthDateLabel.Location = new Point(338, 11);
+            patientBirthDateLabel.Name = "patientBirthDateLabel";
+            patientBirthDateLabel.Size = new Size(100, 25);
+            patientBirthDateLabel.TabIndex = 3;
+            patientBirthDateLabel.Text = "Birth Date";
             // 
-            // label15
+            // patientAddressLabel
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.ForeColor = Color.MediumVioletRed;
-            label15.Location = new Point(338, 52);
-            label15.Name = "label15";
-            label15.Size = new Size(74, 25);
-            label15.TabIndex = 3;
-            label15.Text = "Gender";
+            patientAddressLabel.AutoSize = true;
+            patientAddressLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientAddressLabel.ForeColor = Color.MediumVioletRed;
+            patientAddressLabel.Location = new Point(3, 94);
+            patientAddressLabel.Name = "patientAddressLabel";
+            patientAddressLabel.Size = new Size(80, 25);
+            patientAddressLabel.TabIndex = 3;
+            patientAddressLabel.Text = "Address";
             // 
-            // comboBox1
+            // patientPhoneLabel
             // 
-            comboBox1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(444, 49);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(223, 33);
-            comboBox1.TabIndex = 8;
+            patientPhoneLabel.AutoSize = true;
+            patientPhoneLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientPhoneLabel.ForeColor = Color.MediumVioletRed;
+            patientPhoneLabel.Location = new Point(3, 51);
+            patientPhoneLabel.Name = "patientPhoneLabel";
+            patientPhoneLabel.Size = new Size(66, 25);
+            patientPhoneLabel.TabIndex = 3;
+            patientPhoneLabel.Text = "Phone";
             // 
-            // textBox4
+            // patientNameLabel
             // 
-            textBox4.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.Location = new Point(444, 91);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(223, 93);
-            textBox4.TabIndex = 7;
+            patientNameLabel.AutoSize = true;
+            patientNameLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            patientNameLabel.ForeColor = Color.MediumVioletRed;
+            patientNameLabel.Location = new Point(3, 7);
+            patientNameLabel.Name = "patientNameLabel";
+            patientNameLabel.Size = new Size(64, 25);
+            patientNameLabel.TabIndex = 3;
+            patientNameLabel.Text = "Name";
             // 
             // dataGridView1
             // 
@@ -473,14 +473,14 @@
         #endregion
 
         private Panel panel1;
-        private Label label8;
-        private Label label7;
-        private Label label5;
-        private Label label6;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private Label patientLeftMenuLogoutClickLabel;
+        private Label patientLeftMenuDashboardClickLabel;
+        private Label patientLeftMenuUserClickLabel;
+        private Label patientLeftMenuPrescriptionClickLabel;
+        private Label patientLeftMenuTreatmentClickLabel;
+        private Label patientLeftMenuAppointmentClickLabel;
+        private Label patientLeftMenuHeader;
+        private Label patientLeftMenuSubHeader;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox4;
@@ -490,19 +490,19 @@
         private PictureBox pictureBox1;
         private Label label9;
         private Panel panel2;
-        private Button button1;
-        private DateTimePicker dateTimePicker1;
-        private Label label13;
-        private Label label12;
-        private TextBox textBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label15;
-        private Label label11;
-        private Label label10;
-        private Label label14;
-        private ComboBox comboBox1;
-        private TextBox textBox4;
+        private Button patientSaveButton;
+        private DateTimePicker patientBirthDateTimePicker;
+        private Label patientAllergiesLabel;
+        private Label patientBirthDateLabel;
+        private TextBox patientAddressTextBox;
+        private TextBox patientPhoneTextBox;
+        private TextBox patientNameTextBox;
+        private Label patientGenderLabel;
+        private Label patientAddressLabel;
+        private Label patientPhoneLabel;
+        private Label patientNameLabel;
+        private ComboBox patientGenderTextBox;
+        private TextBox patientAllergiesTextBox;
         private DataGridView dataGridView1;
         private Label label16;
     }

@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
+            LoginLabel = new Label();
+            usernameLabel = new Label();
+            passwordLabel = new Label();
+            usernameTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            loginButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkMagenta;
+            panel1.BackColor = Color.Aquamarine;
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -61,77 +61,77 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // label1
+            // LoginLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.GrayText;
-            label1.Location = new Point(69, 103);
-            label1.Name = "label1";
-            label1.Size = new Size(264, 30);
-            label1.TabIndex = 2;
-            label1.Text = "Dental Clinic Management";
+            LoginLabel.AutoSize = true;
+            LoginLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            LoginLabel.ForeColor = SystemColors.Highlight;
+            LoginLabel.Location = new Point(69, 103);
+            LoginLabel.Name = "LoginLabel";
+            LoginLabel.Size = new Size(264, 30);
+            LoginLabel.TabIndex = 2;
+            LoginLabel.Text = "Dental Clinic Management";
             // 
-            // label2
+            // usernameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(12, 166);
-            label2.Name = "label2";
-            label2.Size = new Size(109, 30);
-            label2.TabIndex = 3;
-            label2.Text = "Username";
+            usernameLabel.AutoSize = true;
+            usernameLabel.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            usernameLabel.Location = new Point(12, 166);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(109, 30);
+            usernameLabel.TabIndex = 3;
+            usernameLabel.Text = "Username";
             // 
-            // label3
+            // passwordLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(12, 237);
-            label3.Name = "label3";
-            label3.Size = new Size(104, 30);
-            label3.TabIndex = 3;
-            label3.Text = "Password";
+            passwordLabel.AutoSize = true;
+            passwordLabel.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            passwordLabel.Location = new Point(12, 237);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new Size(104, 30);
+            passwordLabel.TabIndex = 3;
+            passwordLabel.Text = "Password";
             // 
-            // textBox1
+            // usernameTextBox
             // 
-            textBox1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(162, 163);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(222, 35);
-            textBox1.TabIndex = 4;
+            usernameTextBox.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            usernameTextBox.Location = new Point(162, 163);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(222, 35);
+            usernameTextBox.TabIndex = 0;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            textBox2.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(162, 234);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(222, 35);
-            textBox2.TabIndex = 4;
+            passwordTextBox.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            passwordTextBox.Location = new Point(162, 234);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(222, 35);
+            passwordTextBox.TabIndex = 1;
             // 
-            // button1
+            // loginButton
             // 
-            button1.BackColor = Color.DarkMagenta;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(162, 305);
-            button1.Name = "button1";
-            button1.Size = new Size(222, 40);
-            button1.TabIndex = 5;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            loginButton.BackColor = Color.Aquamarine;
+            loginButton.FlatStyle = FlatStyle.Flat;
+            loginButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            loginButton.Location = new Point(162, 305);
+            loginButton.Name = "loginButton";
+            loginButton.Size = new Size(222, 40);
+            loginButton.TabIndex = 2;
+            loginButton.Text = "Login";
+            loginButton.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightGray;
+            BackColor = Color.White;
             ClientSize = new Size(410, 367);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(loginButton);
+            Controls.Add(passwordTextBox);
+            Controls.Add(usernameTextBox);
+            Controls.Add(passwordLabel);
+            Controls.Add(usernameLabel);
+            Controls.Add(LoginLabel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Login";
@@ -147,11 +147,11 @@
 
         private Panel panel1;
         private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
+        private Label LoginLabel;
+        private Label usernameLabel;
+        private Label passwordLabel;
+        private TextBox usernameTextBox;
+        private TextBox passwordTextBox;
+        private Button loginButton;
     }
 }

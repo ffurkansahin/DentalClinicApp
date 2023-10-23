@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
             panel1 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            appointmentsLeftMenuLogoutLabel = new Label();
+            appointmentsLeftMenuDashboardLabel = new Label();
+            appointmentsLeftMenuUserLabel = new Label();
+            appointmentsLeftMenuPrescriptionLabel = new Label();
+            appointmentsLeftMenuTreatmentLabel = new Label();
+            appointmentsLeftMenuPatientLabel = new Label();
+            appointmentsHeaderLabel = new Label();
+            appointmentsSubHeader = new Label();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -48,18 +47,17 @@
             pictureBox1 = new PictureBox();
             label9 = new Label();
             panel2 = new Panel();
-            button1 = new Button();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            label13 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label10 = new Label();
-            dataGridView1 = new DataGridView();
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            label14 = new Label();
+            appointmentsSaveButton = new Button();
+            appointmentsTimePicker = new DateTimePicker();
+            appointmentsDateTimePicker = new DateTimePicker();
+            treatmentComboBox = new ComboBox();
+            patientComboBox = new ComboBox();
+            appointmentsTimeLabel = new Label();
+            appointmentsTreatmentLabel = new Label();
+            appointmentsDateLabel = new Label();
+            appointmentsPatientLabel = new Label();
+            appointmentsDataGridView = new DataGridView();
+            appointmentsDataGridViewPatientLabel = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -69,20 +67,20 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)appointmentsDataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkMagenta;
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.BackColor = Color.Aquamarine;
+            panel1.Controls.Add(appointmentsLeftMenuLogoutLabel);
+            panel1.Controls.Add(appointmentsLeftMenuDashboardLabel);
+            panel1.Controls.Add(appointmentsLeftMenuUserLabel);
+            panel1.Controls.Add(appointmentsLeftMenuPrescriptionLabel);
+            panel1.Controls.Add(appointmentsLeftMenuTreatmentLabel);
+            panel1.Controls.Add(appointmentsLeftMenuPatientLabel);
+            panel1.Controls.Add(appointmentsHeaderLabel);
+            panel1.Controls.Add(appointmentsSubHeader);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
@@ -96,93 +94,93 @@
             panel1.Size = new Size(174, 600);
             panel1.TabIndex = 0;
             // 
-            // label8
+            // appointmentsLeftMenuLogoutLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(57, 469);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 25);
-            label8.TabIndex = 4;
-            label8.Text = "Logout";
+            appointmentsLeftMenuLogoutLabel.AutoSize = true;
+            appointmentsLeftMenuLogoutLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsLeftMenuLogoutLabel.ForeColor = Color.Black;
+            appointmentsLeftMenuLogoutLabel.Location = new Point(57, 469);
+            appointmentsLeftMenuLogoutLabel.Name = "appointmentsLeftMenuLogoutLabel";
+            appointmentsLeftMenuLogoutLabel.Size = new Size(72, 25);
+            appointmentsLeftMenuLogoutLabel.TabIndex = 4;
+            appointmentsLeftMenuLogoutLabel.Text = "Logout";
             // 
-            // label7
+            // appointmentsLeftMenuDashboardLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(57, 395);
-            label7.Name = "label7";
-            label7.Size = new Size(105, 25);
-            label7.TabIndex = 4;
-            label7.Text = "Dashboard";
+            appointmentsLeftMenuDashboardLabel.AutoSize = true;
+            appointmentsLeftMenuDashboardLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsLeftMenuDashboardLabel.ForeColor = Color.Black;
+            appointmentsLeftMenuDashboardLabel.Location = new Point(57, 395);
+            appointmentsLeftMenuDashboardLabel.Name = "appointmentsLeftMenuDashboardLabel";
+            appointmentsLeftMenuDashboardLabel.Size = new Size(105, 25);
+            appointmentsLeftMenuDashboardLabel.TabIndex = 4;
+            appointmentsLeftMenuDashboardLabel.Text = "Dashboard";
             // 
-            // label5
+            // appointmentsLeftMenuUserLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(57, 321);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 25);
-            label5.TabIndex = 4;
-            label5.Text = "Users";
+            appointmentsLeftMenuUserLabel.AutoSize = true;
+            appointmentsLeftMenuUserLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsLeftMenuUserLabel.ForeColor = Color.Black;
+            appointmentsLeftMenuUserLabel.Location = new Point(57, 321);
+            appointmentsLeftMenuUserLabel.Name = "appointmentsLeftMenuUserLabel";
+            appointmentsLeftMenuUserLabel.Size = new Size(58, 25);
+            appointmentsLeftMenuUserLabel.TabIndex = 4;
+            appointmentsLeftMenuUserLabel.Text = "Users";
             // 
-            // label6
+            // appointmentsLeftMenuPrescriptionLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(57, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(114, 25);
-            label6.TabIndex = 4;
-            label6.Text = "Prescription";
+            appointmentsLeftMenuPrescriptionLabel.AutoSize = true;
+            appointmentsLeftMenuPrescriptionLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsLeftMenuPrescriptionLabel.ForeColor = Color.Black;
+            appointmentsLeftMenuPrescriptionLabel.Location = new Point(57, 247);
+            appointmentsLeftMenuPrescriptionLabel.Name = "appointmentsLeftMenuPrescriptionLabel";
+            appointmentsLeftMenuPrescriptionLabel.Size = new Size(114, 25);
+            appointmentsLeftMenuPrescriptionLabel.TabIndex = 4;
+            appointmentsLeftMenuPrescriptionLabel.Text = "Prescription";
             // 
-            // label4
+            // appointmentsLeftMenuTreatmentLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(57, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(99, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Treatment";
+            appointmentsLeftMenuTreatmentLabel.AutoSize = true;
+            appointmentsLeftMenuTreatmentLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsLeftMenuTreatmentLabel.ForeColor = Color.Black;
+            appointmentsLeftMenuTreatmentLabel.Location = new Point(57, 173);
+            appointmentsLeftMenuTreatmentLabel.Name = "appointmentsLeftMenuTreatmentLabel";
+            appointmentsLeftMenuTreatmentLabel.Size = new Size(99, 25);
+            appointmentsLeftMenuTreatmentLabel.TabIndex = 4;
+            appointmentsLeftMenuTreatmentLabel.Text = "Treatment";
             // 
-            // label3
+            // appointmentsLeftMenuPatientLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(57, 99);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Patient";
+            appointmentsLeftMenuPatientLabel.AutoSize = true;
+            appointmentsLeftMenuPatientLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsLeftMenuPatientLabel.ForeColor = Color.Black;
+            appointmentsLeftMenuPatientLabel.Location = new Point(57, 99);
+            appointmentsLeftMenuPatientLabel.Name = "appointmentsLeftMenuPatientLabel";
+            appointmentsLeftMenuPatientLabel.Size = new Size(72, 25);
+            appointmentsLeftMenuPatientLabel.TabIndex = 4;
+            appointmentsLeftMenuPatientLabel.Text = "Patient";
             // 
-            // label2
+            // appointmentsHeaderLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(55, 4);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Dental Clinic";
+            appointmentsHeaderLabel.AutoSize = true;
+            appointmentsHeaderLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsHeaderLabel.ForeColor = Color.Black;
+            appointmentsHeaderLabel.Location = new Point(55, 4);
+            appointmentsHeaderLabel.Name = "appointmentsHeaderLabel";
+            appointmentsHeaderLabel.Size = new Size(121, 25);
+            appointmentsHeaderLabel.TabIndex = 3;
+            appointmentsHeaderLabel.Text = "Dental Clinic";
             // 
-            // label1
+            // appointmentsSubHeader
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(57, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(95, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Appointments";
+            appointmentsSubHeader.AutoSize = true;
+            appointmentsSubHeader.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsSubHeader.ForeColor = Color.Black;
+            appointmentsSubHeader.Location = new Point(57, 29);
+            appointmentsSubHeader.Name = "appointmentsSubHeader";
+            appointmentsSubHeader.Size = new Size(95, 17);
+            appointmentsSubHeader.TabIndex = 3;
+            appointmentsSubHeader.Text = "Appointments";
             // 
             // pictureBox7
             // 
@@ -267,135 +265,130 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(dateTimePicker2);
-            panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(comboBox2);
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label10);
+            panel2.Controls.Add(appointmentsSaveButton);
+            panel2.Controls.Add(appointmentsTimePicker);
+            panel2.Controls.Add(appointmentsDateTimePicker);
+            panel2.Controls.Add(treatmentComboBox);
+            panel2.Controls.Add(patientComboBox);
+            panel2.Controls.Add(appointmentsTimeLabel);
+            panel2.Controls.Add(appointmentsTreatmentLabel);
+            panel2.Controls.Add(appointmentsDateLabel);
+            panel2.Controls.Add(appointmentsPatientLabel);
             panel2.Location = new Point(180, 45);
             panel2.Name = "panel2";
             panel2.Size = new Size(730, 192);
             panel2.TabIndex = 4;
             // 
-            // button1
+            // appointmentsSaveButton
             // 
-            button1.BackColor = Color.MediumVioletRed;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(354, 141);
-            button1.Name = "button1";
-            button1.Size = new Size(132, 44);
-            button1.TabIndex = 6;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = false;
+            appointmentsSaveButton.BackColor = Color.Aquamarine;
+            appointmentsSaveButton.FlatStyle = FlatStyle.Flat;
+            appointmentsSaveButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsSaveButton.Location = new Point(354, 141);
+            appointmentsSaveButton.Name = "appointmentsSaveButton";
+            appointmentsSaveButton.Size = new Size(132, 44);
+            appointmentsSaveButton.TabIndex = 4;
+            appointmentsSaveButton.Text = "Save";
+            appointmentsSaveButton.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker2
+            // appointmentsTimePicker
             // 
-            dateTimePicker2.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker2.Location = new Point(444, 93);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(223, 28);
-            dateTimePicker2.TabIndex = 4;
+            appointmentsTimePicker.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsTimePicker.Location = new Point(444, 93);
+            appointmentsTimePicker.Name = "appointmentsTimePicker";
+            appointmentsTimePicker.Size = new Size(223, 28);
+            appointmentsTimePicker.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // appointmentsDateTimePicker
             // 
-            dateTimePicker1.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(444, 24);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(223, 28);
-            dateTimePicker1.TabIndex = 4;
+            appointmentsDateTimePicker.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsDateTimePicker.Location = new Point(444, 24);
+            appointmentsDateTimePicker.Name = "appointmentsDateTimePicker";
+            appointmentsDateTimePicker.Size = new Size(223, 28);
+            appointmentsDateTimePicker.TabIndex = 2;
             // 
-            // comboBox2
+            // treatmentComboBox
             // 
-            comboBox2.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(122, 87);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(207, 38);
-            comboBox2.TabIndex = 0;
+            treatmentComboBox.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            treatmentComboBox.FormattingEnabled = true;
+            treatmentComboBox.Location = new Point(122, 87);
+            treatmentComboBox.Name = "treatmentComboBox";
+            treatmentComboBox.Size = new Size(207, 38);
+            treatmentComboBox.TabIndex = 1;
             // 
-            // comboBox1
+            // patientComboBox
             // 
-            comboBox1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(122, 21);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(207, 38);
-            comboBox1.TabIndex = 0;
+            patientComboBox.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            patientComboBox.FormattingEnabled = true;
+            patientComboBox.Location = new Point(122, 21);
+            patientComboBox.Name = "patientComboBox";
+            patientComboBox.Size = new Size(207, 38);
+            patientComboBox.TabIndex = 0;
             // 
-            // label13
+            // appointmentsTimeLabel
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.ForeColor = Color.MediumVioletRed;
-            label13.Location = new Point(354, 90);
-            label13.Name = "label13";
-            label13.Size = new Size(60, 30);
-            label13.TabIndex = 3;
-            label13.Text = "Time";
+            appointmentsTimeLabel.AutoSize = true;
+            appointmentsTimeLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsTimeLabel.ForeColor = Color.MediumVioletRed;
+            appointmentsTimeLabel.Location = new Point(354, 90);
+            appointmentsTimeLabel.Name = "appointmentsTimeLabel";
+            appointmentsTimeLabel.Size = new Size(60, 30);
+            appointmentsTimeLabel.TabIndex = 3;
+            appointmentsTimeLabel.Text = "Time";
             // 
-            // label11
+            // appointmentsTreatmentLabel
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.MediumVioletRed;
-            label11.Location = new Point(3, 90);
-            label11.Name = "label11";
-            label11.Size = new Size(111, 30);
-            label11.TabIndex = 3;
-            label11.Text = "Treatment";
+            appointmentsTreatmentLabel.AutoSize = true;
+            appointmentsTreatmentLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsTreatmentLabel.ForeColor = Color.MediumVioletRed;
+            appointmentsTreatmentLabel.Location = new Point(3, 90);
+            appointmentsTreatmentLabel.Name = "appointmentsTreatmentLabel";
+            appointmentsTreatmentLabel.Size = new Size(111, 30);
+            appointmentsTreatmentLabel.TabIndex = 3;
+            appointmentsTreatmentLabel.Text = "Treatment";
             // 
-            // label12
+            // appointmentsDateLabel
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.MediumVioletRed;
-            label12.Location = new Point(354, 24);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 30);
-            label12.TabIndex = 3;
-            label12.Text = "Date";
+            appointmentsDateLabel.AutoSize = true;
+            appointmentsDateLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsDateLabel.ForeColor = Color.MediumVioletRed;
+            appointmentsDateLabel.Location = new Point(354, 24);
+            appointmentsDateLabel.Name = "appointmentsDateLabel";
+            appointmentsDateLabel.Size = new Size(58, 30);
+            appointmentsDateLabel.TabIndex = 3;
+            appointmentsDateLabel.Text = "Date";
             // 
-            // label10
+            // appointmentsPatientLabel
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.MediumVioletRed;
-            label10.Location = new Point(3, 24);
-            label10.Name = "label10";
-            label10.Size = new Size(79, 30);
-            label10.TabIndex = 3;
-            label10.Text = "Patient";
+            appointmentsPatientLabel.AutoSize = true;
+            appointmentsPatientLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsPatientLabel.ForeColor = Color.MediumVioletRed;
+            appointmentsPatientLabel.Location = new Point(3, 24);
+            appointmentsPatientLabel.Name = "appointmentsPatientLabel";
+            appointmentsPatientLabel.Size = new Size(79, 30);
+            appointmentsPatientLabel.TabIndex = 3;
+            appointmentsPatientLabel.Text = "Patient";
             // 
-            // dataGridView1
+            // appointmentsDataGridView
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(180, 270);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(730, 318);
-            dataGridView1.TabIndex = 5;
+            appointmentsDataGridView.BackgroundColor = Color.White;
+            appointmentsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            appointmentsDataGridView.Location = new Point(180, 270);
+            appointmentsDataGridView.Name = "appointmentsDataGridView";
+            appointmentsDataGridView.RowTemplate.Height = 25;
+            appointmentsDataGridView.Size = new Size(730, 318);
+            appointmentsDataGridView.TabIndex = 5;
             // 
-            // contextMenuStrip1
+            // appointmentsDataGridViewPatientLabel
             // 
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.MediumVioletRed;
-            label14.Location = new Point(513, 240);
-            label14.Name = "label14";
-            label14.Size = new Size(79, 30);
-            label14.TabIndex = 3;
-            label14.Text = "Patient";
+            appointmentsDataGridViewPatientLabel.AutoSize = true;
+            appointmentsDataGridViewPatientLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsDataGridViewPatientLabel.ForeColor = Color.MediumVioletRed;
+            appointmentsDataGridViewPatientLabel.Location = new Point(513, 240);
+            appointmentsDataGridViewPatientLabel.Name = "appointmentsDataGridViewPatientLabel";
+            appointmentsDataGridViewPatientLabel.Size = new Size(79, 30);
+            appointmentsDataGridViewPatientLabel.TabIndex = 3;
+            appointmentsDataGridViewPatientLabel.Text = "Patient";
             // 
             // Appointment
             // 
@@ -403,11 +396,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(926, 600);
-            Controls.Add(dataGridView1);
+            Controls.Add(appointmentsDataGridView);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label9);
-            Controls.Add(label14);
+            Controls.Add(appointmentsDataGridViewPatientLabel);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Appointment";
             StartPosition = FormStartPosition.CenterScreen;
@@ -423,7 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)appointmentsDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -432,34 +425,33 @@
 
         private Panel panel1;
         private PictureBox pictureBox1;
-        private Label label2;
-        private Label label1;
-        private Label label4;
-        private Label label3;
+        private Label appointmentsHeaderLabel;
+        private Label appointmentsSubHeader;
+        private Label appointmentsLeftMenuTreatmentLabel;
+        private Label appointmentsLeftMenuPatientLabel;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private Label label5;
+        private Label appointmentsLeftMenuUserLabel;
         private PictureBox pictureBox4;
-        private Label label8;
-        private Label label7;
-        private Label label6;
+        private Label appointmentsLeftMenuLogoutLabel;
+        private Label appointmentsLeftMenuDashboardLabel;
+        private Label appointmentsLeftMenuPrescriptionLabel;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private Label label9;
         private Panel panel2;
-        private ComboBox comboBox1;
-        private Label label10;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox2;
-        private Label label13;
-        private Label label11;
-        private Label label12;
-        private Button button1;
+        private ComboBox patientComboBox;
+        private Label appointmentsPatientLabel;
+        private DateTimePicker appointmentsTimePicker;
+        private DateTimePicker appointmentsDateTimePicker;
+        private ComboBox treatmentComboBox;
+        private Label appointmentsTimeLabel;
+        private Label appointmentsTreatmentLabel;
+        private Label appointmentsDateLabel;
+        private Button appointmentsSaveButton;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private DataGridView dataGridView1;
-        private ContextMenuStrip contextMenuStrip1;
-        private Label label14;
+        private DataGridView appointmentsDataGridView;
+        private Label appointmentsDataGridViewPatientLabel;
     }
 }

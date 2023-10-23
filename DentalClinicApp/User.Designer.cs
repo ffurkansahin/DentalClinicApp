@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
             panel1 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            userLeftMenuLogoutLabelClick = new Label();
+            userLeftMenuDashboardLabelClick = new Label();
+            userLeftMenuTreatmentLabelClick = new Label();
+            userLeftMenuPrescriptionLabelClick = new Label();
+            userLeftMenuAppointmentLabelClick = new Label();
+            userLeftMenuPatientLabelClick = new Label();
+            userLeftMenuHeader = new Label();
+            userLeftMenuSubHeader = new Label();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -46,13 +46,13 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            label10 = new Label();
-            label11 = new Label();
-            label14 = new Label();
+            userSaveButton = new Button();
+            userPasswordTextBox = new TextBox();
+            userPhoneTextBox = new TextBox();
+            userUsernameTextBox = new TextBox();
+            userPasswordLabel = new Label();
+            userPhoneLabel = new Label();
+            userUsernameLabel = new Label();
             label9 = new Label();
             dataGridView1 = new DataGridView();
             label16 = new Label();
@@ -70,15 +70,15 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkMagenta;
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.BackColor = Color.Aquamarine;
+            panel1.Controls.Add(userLeftMenuLogoutLabelClick);
+            panel1.Controls.Add(userLeftMenuDashboardLabelClick);
+            panel1.Controls.Add(userLeftMenuTreatmentLabelClick);
+            panel1.Controls.Add(userLeftMenuPrescriptionLabelClick);
+            panel1.Controls.Add(userLeftMenuAppointmentLabelClick);
+            panel1.Controls.Add(userLeftMenuPatientLabelClick);
+            panel1.Controls.Add(userLeftMenuHeader);
+            panel1.Controls.Add(userLeftMenuSubHeader);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
@@ -92,93 +92,93 @@
             panel1.Size = new Size(182, 600);
             panel1.TabIndex = 2;
             // 
-            // label8
+            // userLeftMenuLogoutLabelClick
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(57, 469);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 25);
-            label8.TabIndex = 4;
-            label8.Text = "Logout";
+            userLeftMenuLogoutLabelClick.AutoSize = true;
+            userLeftMenuLogoutLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuLogoutLabelClick.ForeColor = Color.Black;
+            userLeftMenuLogoutLabelClick.Location = new Point(57, 469);
+            userLeftMenuLogoutLabelClick.Name = "userLeftMenuLogoutLabelClick";
+            userLeftMenuLogoutLabelClick.Size = new Size(72, 25);
+            userLeftMenuLogoutLabelClick.TabIndex = 4;
+            userLeftMenuLogoutLabelClick.Text = "Logout";
             // 
-            // label7
+            // userLeftMenuDashboardLabelClick
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(57, 395);
-            label7.Name = "label7";
-            label7.Size = new Size(105, 25);
-            label7.TabIndex = 4;
-            label7.Text = "Dashboard";
+            userLeftMenuDashboardLabelClick.AutoSize = true;
+            userLeftMenuDashboardLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuDashboardLabelClick.ForeColor = Color.Black;
+            userLeftMenuDashboardLabelClick.Location = new Point(57, 395);
+            userLeftMenuDashboardLabelClick.Name = "userLeftMenuDashboardLabelClick";
+            userLeftMenuDashboardLabelClick.Size = new Size(105, 25);
+            userLeftMenuDashboardLabelClick.TabIndex = 4;
+            userLeftMenuDashboardLabelClick.Text = "Dashboard";
             // 
-            // label5
+            // userLeftMenuTreatmentLabelClick
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(57, 321);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 25);
-            label5.TabIndex = 4;
-            label5.Text = "Treatment";
+            userLeftMenuTreatmentLabelClick.AutoSize = true;
+            userLeftMenuTreatmentLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuTreatmentLabelClick.ForeColor = Color.Black;
+            userLeftMenuTreatmentLabelClick.Location = new Point(57, 321);
+            userLeftMenuTreatmentLabelClick.Name = "userLeftMenuTreatmentLabelClick";
+            userLeftMenuTreatmentLabelClick.Size = new Size(99, 25);
+            userLeftMenuTreatmentLabelClick.TabIndex = 4;
+            userLeftMenuTreatmentLabelClick.Text = "Treatment";
             // 
-            // label6
+            // userLeftMenuPrescriptionLabelClick
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(57, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(114, 25);
-            label6.TabIndex = 4;
-            label6.Text = "Prescription";
+            userLeftMenuPrescriptionLabelClick.AutoSize = true;
+            userLeftMenuPrescriptionLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuPrescriptionLabelClick.ForeColor = Color.Black;
+            userLeftMenuPrescriptionLabelClick.Location = new Point(57, 247);
+            userLeftMenuPrescriptionLabelClick.Name = "userLeftMenuPrescriptionLabelClick";
+            userLeftMenuPrescriptionLabelClick.Size = new Size(114, 25);
+            userLeftMenuPrescriptionLabelClick.TabIndex = 4;
+            userLeftMenuPrescriptionLabelClick.Text = "Prescription";
             // 
-            // label4
+            // userLeftMenuAppointmentLabelClick
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(57, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Appointment";
+            userLeftMenuAppointmentLabelClick.AutoSize = true;
+            userLeftMenuAppointmentLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuAppointmentLabelClick.ForeColor = Color.Black;
+            userLeftMenuAppointmentLabelClick.Location = new Point(55, 173);
+            userLeftMenuAppointmentLabelClick.Name = "userLeftMenuAppointmentLabelClick";
+            userLeftMenuAppointmentLabelClick.Size = new Size(126, 25);
+            userLeftMenuAppointmentLabelClick.TabIndex = 4;
+            userLeftMenuAppointmentLabelClick.Text = "Appointment";
             // 
-            // label3
+            // userLeftMenuPatientLabelClick
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(57, 99);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Patient";
+            userLeftMenuPatientLabelClick.AutoSize = true;
+            userLeftMenuPatientLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuPatientLabelClick.ForeColor = Color.Black;
+            userLeftMenuPatientLabelClick.Location = new Point(57, 99);
+            userLeftMenuPatientLabelClick.Name = "userLeftMenuPatientLabelClick";
+            userLeftMenuPatientLabelClick.Size = new Size(72, 25);
+            userLeftMenuPatientLabelClick.TabIndex = 4;
+            userLeftMenuPatientLabelClick.Text = "Patient";
             // 
-            // label2
+            // userLeftMenuHeader
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(55, 4);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Dental Clinic";
+            userLeftMenuHeader.AutoSize = true;
+            userLeftMenuHeader.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuHeader.ForeColor = Color.Black;
+            userLeftMenuHeader.Location = new Point(55, 4);
+            userLeftMenuHeader.Name = "userLeftMenuHeader";
+            userLeftMenuHeader.Size = new Size(121, 25);
+            userLeftMenuHeader.TabIndex = 3;
+            userLeftMenuHeader.Text = "Dental Clinic";
             // 
-            // label1
+            // userLeftMenuSubHeader
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(57, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(41, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Users";
+            userLeftMenuSubHeader.AutoSize = true;
+            userLeftMenuSubHeader.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            userLeftMenuSubHeader.ForeColor = Color.Black;
+            userLeftMenuSubHeader.Location = new Point(57, 29);
+            userLeftMenuSubHeader.Name = "userLeftMenuSubHeader";
+            userLeftMenuSubHeader.Size = new Size(41, 17);
+            userLeftMenuSubHeader.TabIndex = 3;
+            userLeftMenuSubHeader.Text = "Users";
             // 
             // pictureBox7
             // 
@@ -252,88 +252,88 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label14);
+            panel2.Controls.Add(userSaveButton);
+            panel2.Controls.Add(userPasswordTextBox);
+            panel2.Controls.Add(userPhoneTextBox);
+            panel2.Controls.Add(userUsernameTextBox);
+            panel2.Controls.Add(userPasswordLabel);
+            panel2.Controls.Add(userPhoneLabel);
+            panel2.Controls.Add(userUsernameLabel);
             panel2.Location = new Point(186, 45);
             panel2.Name = "panel2";
             panel2.Size = new Size(730, 192);
             panel2.TabIndex = 8;
             // 
-            // button1
+            // userSaveButton
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(376, 113);
-            button1.Name = "button1";
-            button1.Size = new Size(132, 44);
-            button1.TabIndex = 13;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = false;
+            userSaveButton.BackColor = Color.Aquamarine;
+            userSaveButton.FlatStyle = FlatStyle.Flat;
+            userSaveButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            userSaveButton.ForeColor = Color.Black;
+            userSaveButton.Location = new Point(376, 113);
+            userSaveButton.Name = "userSaveButton";
+            userSaveButton.Size = new Size(132, 44);
+            userSaveButton.TabIndex = 3;
+            userSaveButton.Text = "Save";
+            userSaveButton.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // userPasswordTextBox
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(464, 37);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 32);
-            textBox1.TabIndex = 12;
+            userPasswordTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            userPasswordTextBox.Location = new Point(464, 37);
+            userPasswordTextBox.Name = "userPasswordTextBox";
+            userPasswordTextBox.Size = new Size(262, 32);
+            userPasswordTextBox.TabIndex = 1;
             // 
-            // textBox3
+            // userPhoneTextBox
             // 
-            textBox3.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(118, 121);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(216, 28);
-            textBox3.TabIndex = 11;
+            userPhoneTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            userPhoneTextBox.Location = new Point(118, 121);
+            userPhoneTextBox.Multiline = true;
+            userPhoneTextBox.Name = "userPhoneTextBox";
+            userPhoneTextBox.Size = new Size(216, 28);
+            userPhoneTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // userUsernameTextBox
             // 
-            textBox2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(118, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(216, 32);
-            textBox2.TabIndex = 11;
+            userUsernameTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            userUsernameTextBox.Location = new Point(118, 37);
+            userUsernameTextBox.Name = "userUsernameTextBox";
+            userUsernameTextBox.Size = new Size(216, 32);
+            userUsernameTextBox.TabIndex = 0;
             // 
-            // label10
+            // userPasswordLabel
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.MediumVioletRed;
-            label10.Location = new Point(376, 40);
-            label10.Name = "label10";
-            label10.Size = new Size(91, 25);
-            label10.TabIndex = 8;
-            label10.Text = "Password";
+            userPasswordLabel.AutoSize = true;
+            userPasswordLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            userPasswordLabel.ForeColor = Color.MediumVioletRed;
+            userPasswordLabel.Location = new Point(376, 40);
+            userPasswordLabel.Name = "userPasswordLabel";
+            userPasswordLabel.Size = new Size(91, 25);
+            userPasswordLabel.TabIndex = 8;
+            userPasswordLabel.Text = "Password";
             // 
-            // label11
+            // userPhoneLabel
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.MediumVioletRed;
-            label11.Location = new Point(2, 124);
-            label11.Name = "label11";
-            label11.Size = new Size(66, 25);
-            label11.TabIndex = 9;
-            label11.Text = "Phone";
+            userPhoneLabel.AutoSize = true;
+            userPhoneLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            userPhoneLabel.ForeColor = Color.MediumVioletRed;
+            userPhoneLabel.Location = new Point(6, 124);
+            userPhoneLabel.Name = "userPhoneLabel";
+            userPhoneLabel.Size = new Size(66, 25);
+            userPhoneLabel.TabIndex = 9;
+            userPhoneLabel.Text = "Phone";
             // 
-            // label14
+            // userUsernameLabel
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.MediumVioletRed;
-            label14.Location = new Point(2, 40);
-            label14.Name = "label14";
-            label14.Size = new Size(64, 25);
-            label14.TabIndex = 9;
-            label14.Text = "Name";
+            userUsernameLabel.AutoSize = true;
+            userUsernameLabel.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            userUsernameLabel.ForeColor = Color.MediumVioletRed;
+            userUsernameLabel.Location = new Point(6, 40);
+            userUsernameLabel.Name = "userUsernameLabel";
+            userUsernameLabel.Size = new Size(98, 25);
+            userUsernameLabel.TabIndex = 9;
+            userUsernameLabel.Text = "Username";
             // 
             // label9
             // 
@@ -401,14 +401,14 @@
         #endregion
 
         private Panel panel1;
-        private Label label8;
-        private Label label7;
-        private Label label5;
-        private Label label6;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private Label userLeftMenuLogoutLabelClick;
+        private Label userLeftMenuDashboardLabelClick;
+        private Label userLeftMenuTreatmentLabelClick;
+        private Label userLeftMenuPrescriptionLabelClick;
+        private Label userLeftMenuAppointmentLabelClick;
+        private Label userLeftMenuPatientLabelClick;
+        private Label userLeftMenuHeader;
+        private Label userLeftMenuSubHeader;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox4;
@@ -417,13 +417,13 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Panel panel2;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private Label label10;
-        private Label label11;
-        private Label label14;
+        private Button userSaveButton;
+        private TextBox userPasswordTextBox;
+        private TextBox userPhoneTextBox;
+        private TextBox userUsernameTextBox;
+        private Label userPasswordLabel;
+        private Label userPhoneLabel;
+        private Label userUsernameLabel;
         private Label label9;
         private DataGridView dataGridView1;
         private Label label16;
