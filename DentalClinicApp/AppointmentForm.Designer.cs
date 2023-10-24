@@ -1,6 +1,6 @@
 ﻿namespace DentalClinicApp
 {
-    partial class Appointment
+    partial class AppointmentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentForm));
             panel1 = new Panel();
             appointmentsLeftMenuLogoutLabel = new Label();
             appointmentsLeftMenuDashboardLabel = new Label();
@@ -290,12 +290,15 @@
             appointmentsSaveButton.TabIndex = 4;
             appointmentsSaveButton.Text = "Save";
             appointmentsSaveButton.UseVisualStyleBackColor = false;
+            appointmentsSaveButton.Click += appointmentsSaveButton_Click;
             // 
             // appointmentsTimePicker
             // 
             appointmentsTimePicker.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentsTimePicker.Format = DateTimePickerFormat.Time;
             appointmentsTimePicker.Location = new Point(444, 93);
             appointmentsTimePicker.Name = "appointmentsTimePicker";
+            appointmentsTimePicker.ShowUpDown = true;
             appointmentsTimePicker.Size = new Size(223, 28);
             appointmentsTimePicker.TabIndex = 3;
             // 
@@ -386,11 +389,11 @@
             appointmentsDataGridViewPatientLabel.ForeColor = Color.MediumVioletRed;
             appointmentsDataGridViewPatientLabel.Location = new Point(513, 240);
             appointmentsDataGridViewPatientLabel.Name = "appointmentsDataGridViewPatientLabel";
-            appointmentsDataGridViewPatientLabel.Size = new Size(79, 30);
+            appointmentsDataGridViewPatientLabel.Size = new Size(25, 30);
             appointmentsDataGridViewPatientLabel.TabIndex = 3;
-            appointmentsDataGridViewPatientLabel.Text = "Patient";
+            appointmentsDataGridViewPatientLabel.Text = "  ";
             // 
-            // Appointment
+            // AppointmentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -402,9 +405,10 @@
             Controls.Add(label9);
             Controls.Add(appointmentsDataGridViewPatientLabel);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "Appointment";
+            Name = "AppointmentForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Appointment";
+            Load += AppointmentForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace DentalClinicApp
 {
-    partial class Treatment
+    partial class TreatmentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Treatment));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreatmentForm));
             panel1 = new Panel();
             treatmentLeftMenuLogoutClickLabel = new Label();
             pictureBox7 = new PictureBox();
@@ -276,6 +276,7 @@
             treatmentSaveButton.TabIndex = 3;
             treatmentSaveButton.Text = "Save";
             treatmentSaveButton.UseVisualStyleBackColor = false;
+            treatmentSaveButton.Click += treatmentSaveButton_Click;
             // 
             // treatmentCostTextBox
             // 
@@ -363,11 +364,11 @@
             label16.ForeColor = Color.MediumVioletRed;
             label16.Location = new Point(521, 247);
             label16.Name = "label16";
-            label16.Size = new Size(79, 30);
+            label16.Size = new Size(120, 30);
             label16.TabIndex = 8;
-            label16.Text = "Patient";
+            label16.Text = "Treatments";
             // 
-            // Treatment
+            // TreatmentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -379,9 +380,10 @@
             Controls.Add(label9);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "Treatment";
+            Name = "TreatmentForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Treatment";
+            Load += TreatmentForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();

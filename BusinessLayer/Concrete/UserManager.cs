@@ -18,27 +18,27 @@ namespace BusinessLayer.Concrete
             this.userDAL = userDAL;
         }
 
-        public void Delete(User t)
+        public void Delete(Users t)
         {
             userDAL.Delete(t);
         }
 
-        public User GetById(int id)
+        public Users GetById(int id)
         {
             return userDAL.GetByID(id);
         }
 
-        public List<User> GetListAll()
+        public List<Users> GetListAll()
         {
             return userDAL.GetAll();
         }
 
-        public void Insert(User t)
+        public void Insert(Users t)
         {
             userDAL.Insert(t);
         }
 
-        public void Update(User t)
+        public void Update(Users t)
         {
             userDAL.Update(t);
         }

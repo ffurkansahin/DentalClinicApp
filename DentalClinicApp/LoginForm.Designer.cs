@@ -1,6 +1,6 @@
 ﻿namespace DentalClinicApp
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             LoginLabel = new Label();
@@ -37,6 +37,7 @@
             usernameTextBox = new TextBox();
             passwordTextBox = new TextBox();
             loginButton = new Button();
+            signupButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -119,6 +120,20 @@
             loginButton.TabIndex = 2;
             loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginButton_Click;
+            // 
+            // signupButton
+            // 
+            signupButton.BackColor = Color.Aquamarine;
+            signupButton.FlatStyle = FlatStyle.Flat;
+            signupButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            signupButton.Location = new Point(12, 305);
+            signupButton.Name = "signupButton";
+            signupButton.Size = new Size(104, 40);
+            signupButton.TabIndex = 2;
+            signupButton.Text = "Sign Up";
+            signupButton.UseVisualStyleBackColor = false;
+            signupButton.Click += signupButton_Click;
             // 
             // Login
             // 
@@ -126,6 +141,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(410, 367);
+            Controls.Add(signupButton);
             Controls.Add(loginButton);
             Controls.Add(passwordTextBox);
             Controls.Add(usernameTextBox);
@@ -153,5 +169,6 @@
         private TextBox usernameTextBox;
         private TextBox passwordTextBox;
         private Button loginButton;
+        private Button signupButton;
     }
 }

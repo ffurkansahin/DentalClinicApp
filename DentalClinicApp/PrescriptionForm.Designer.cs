@@ -1,6 +1,6 @@
 ﻿namespace DentalClinicApp
 {
-    partial class Prescription
+    partial class PrescriptionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescription));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrescriptionForm));
             panel1 = new Panel();
             prescriptionLeftMenuLogoutClickLabel = new Label();
             prescriptionLeftMenuDashboardClickLabel = new Label();
