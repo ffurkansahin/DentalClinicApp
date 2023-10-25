@@ -16,7 +16,7 @@ public partial class DentalDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Appointment> Appointments { get; set; }
+    public virtual DbSet<Appointment> Appointment { get; set; }
 
     public virtual DbSet<Patient> Patients { get; set; }
 
@@ -37,7 +37,7 @@ public partial class DentalDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Date).HasColumnType("date");
             entity.Property(e => e.Patient).HasMaxLength(50);
-            entity.Property(e => e.Time).HasColumnType("date");
+            entity.Property(e => e.Time).HasMaxLength(50);
             entity.Property(e => e.Treatment).HasMaxLength(50);
         });
 

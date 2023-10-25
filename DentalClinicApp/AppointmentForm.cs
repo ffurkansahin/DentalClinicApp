@@ -57,7 +57,7 @@ namespace DentalClinicApp
                 appointment.Patient = patientComboBox.Text;
                 appointment.Treatment = treatmentComboBox.Text;
                 appointment.Date = appointmentsDateTimePicker.Value;
-                appointment.Time = appointmentsTimePicker.Value;
+                appointment.Time = appointmentsTimePicker.Value.ToString("HH:mm");
 
                 appointmentManager.Update(appointment);
 
@@ -70,7 +70,7 @@ namespace DentalClinicApp
                     Patient = patientComboBox.Text,
                     Treatment = treatmentComboBox.Text,
                     Date = appointmentsDateTimePicker.Value,
-                    Time = appointmentsTimePicker.Value
+                    Time = appointmentsTimePicker.Value.ToString("HH:mm")
                 });
             }
 
@@ -85,7 +85,7 @@ namespace DentalClinicApp
             table.Columns.Add("Patient Name", typeof(string));
             table.Columns.Add("Treatment", typeof(string));
             table.Columns.Add("Date", typeof(DateTime));
-            table.Columns.Add("Time", typeof(DateTime));
+            table.Columns.Add("Time", typeof(string));
             appointmentsDataGridView.DataSource = table;
 
             foreach (DataColumn column in table.Columns)

@@ -13,5 +13,5 @@ public partial class Appointment
 
     public DateTime Date { get; set; }
 
-    public DateTime Time { get; set; }
+    public string Time { get; set; } = null!;
 }
