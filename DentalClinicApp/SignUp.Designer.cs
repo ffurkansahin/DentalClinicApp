@@ -53,7 +53,7 @@
             signUpButton.Location = new Point(162, 397);
             signUpButton.Name = "signUpButton";
             signUpButton.Size = new Size(222, 40);
-            signUpButton.TabIndex = 7;
+            signUpButton.TabIndex = 4;
             signUpButton.Text = "Sign Up";
             signUpButton.UseVisualStyleBackColor = false;
             signUpButton.Click += signUpButton_Click;
@@ -65,7 +65,7 @@
             SignUpPasswordTextBox.Name = "SignUpPasswordTextBox";
             SignUpPasswordTextBox.PasswordChar = '*';
             SignUpPasswordTextBox.Size = new Size(222, 35);
-            SignUpPasswordTextBox.TabIndex = 6;
+            SignUpPasswordTextBox.TabIndex = 1;
             // 
             // SignUpUsernameTextBox
             // 
@@ -73,7 +73,7 @@
             SignUpUsernameTextBox.Location = new Point(162, 135);
             SignUpUsernameTextBox.Name = "SignUpUsernameTextBox";
             SignUpUsernameTextBox.Size = new Size(222, 35);
-            SignUpUsernameTextBox.TabIndex = 4;
+            SignUpUsernameTextBox.TabIndex = 0;
             // 
             // SignUpUsernameLabel
             // 
@@ -133,7 +133,7 @@
             SignUpPasswordAgainTextBox.Name = "SignUpPasswordAgainTextBox";
             SignUpPasswordAgainTextBox.PasswordChar = '*';
             SignUpPasswordAgainTextBox.Size = new Size(222, 35);
-            SignUpPasswordAgainTextBox.TabIndex = 6;
+            SignUpPasswordAgainTextBox.TabIndex = 2;
             // 
             // signUpPasswordLbl
             // 
@@ -161,7 +161,7 @@
             signUpPhoneTextBox.Location = new Point(162, 327);
             signUpPhoneTextBox.Name = "signUpPhoneTextBox";
             signUpPhoneTextBox.Size = new Size(222, 35);
-            signUpPhoneTextBox.TabIndex = 6;
+            signUpPhoneTextBox.TabIndex = 3;
             // 
             // SignUp
             // 

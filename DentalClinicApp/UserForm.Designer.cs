@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             panel1 = new Panel();
             userLeftMenuLogoutLabelClick = new Label();
-            userLeftMenuDashboardLabelClick = new Label();
             userLeftMenuTreatmentLabelClick = new Label();
             userLeftMenuPrescriptionLabelClick = new Label();
             userLeftMenuAppointmentLabelClick = new Label();
@@ -39,7 +38,6 @@
             userLeftMenuHeader = new Label();
             userLeftMenuSubHeader = new Label();
             pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -58,7 +56,6 @@
             label16 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -72,7 +69,6 @@
             // 
             panel1.BackColor = Color.Aquamarine;
             panel1.Controls.Add(userLeftMenuLogoutLabelClick);
-            panel1.Controls.Add(userLeftMenuDashboardLabelClick);
             panel1.Controls.Add(userLeftMenuTreatmentLabelClick);
             panel1.Controls.Add(userLeftMenuPrescriptionLabelClick);
             panel1.Controls.Add(userLeftMenuAppointmentLabelClick);
@@ -80,7 +76,6 @@
             panel1.Controls.Add(userLeftMenuHeader);
             panel1.Controls.Add(userLeftMenuSubHeader);
             panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox3);
@@ -97,22 +92,12 @@
             userLeftMenuLogoutLabelClick.AutoSize = true;
             userLeftMenuLogoutLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             userLeftMenuLogoutLabelClick.ForeColor = Color.Black;
-            userLeftMenuLogoutLabelClick.Location = new Point(57, 469);
+            userLeftMenuLogoutLabelClick.Location = new Point(57, 395);
             userLeftMenuLogoutLabelClick.Name = "userLeftMenuLogoutLabelClick";
             userLeftMenuLogoutLabelClick.Size = new Size(72, 25);
             userLeftMenuLogoutLabelClick.TabIndex = 4;
             userLeftMenuLogoutLabelClick.Text = "Logout";
-            // 
-            // userLeftMenuDashboardLabelClick
-            // 
-            userLeftMenuDashboardLabelClick.AutoSize = true;
-            userLeftMenuDashboardLabelClick.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            userLeftMenuDashboardLabelClick.ForeColor = Color.Black;
-            userLeftMenuDashboardLabelClick.Location = new Point(57, 395);
-            userLeftMenuDashboardLabelClick.Name = "userLeftMenuDashboardLabelClick";
-            userLeftMenuDashboardLabelClick.Size = new Size(105, 25);
-            userLeftMenuDashboardLabelClick.TabIndex = 4;
-            userLeftMenuDashboardLabelClick.Text = "Dashboard";
+            userLeftMenuLogoutLabelClick.Click += userLeftMenuLogoutLabelClick_Click;
             // 
             // userLeftMenuTreatmentLabelClick
             // 
@@ -124,6 +109,7 @@
             userLeftMenuTreatmentLabelClick.Size = new Size(99, 25);
             userLeftMenuTreatmentLabelClick.TabIndex = 4;
             userLeftMenuTreatmentLabelClick.Text = "Treatment";
+            userLeftMenuTreatmentLabelClick.Click += userLeftMenuTreatmentLabelClick_Click;
             // 
             // userLeftMenuPrescriptionLabelClick
             // 
@@ -135,6 +121,7 @@
             userLeftMenuPrescriptionLabelClick.Size = new Size(114, 25);
             userLeftMenuPrescriptionLabelClick.TabIndex = 4;
             userLeftMenuPrescriptionLabelClick.Text = "Prescription";
+            userLeftMenuPrescriptionLabelClick.Click += userLeftMenuPrescriptionLabelClick_Click;
             // 
             // userLeftMenuAppointmentLabelClick
             // 
@@ -146,6 +133,7 @@
             userLeftMenuAppointmentLabelClick.Size = new Size(126, 25);
             userLeftMenuAppointmentLabelClick.TabIndex = 4;
             userLeftMenuAppointmentLabelClick.Text = "Appointment";
+            userLeftMenuAppointmentLabelClick.Click += userLeftMenuAppointmentLabelClick_Click;
             // 
             // userLeftMenuPatientLabelClick
             // 
@@ -157,6 +145,7 @@
             userLeftMenuPatientLabelClick.Size = new Size(72, 25);
             userLeftMenuPatientLabelClick.TabIndex = 4;
             userLeftMenuPatientLabelClick.Text = "Patient";
+            userLeftMenuPatientLabelClick.Click += userLeftMenuPatientLabelClick_Click;
             // 
             // userLeftMenuHeader
             // 
@@ -183,22 +172,12 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 455);
+            pictureBox7.Location = new Point(3, 381);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(48, 49);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 2;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(3, 381);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(48, 49);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 2;
-            pictureBox6.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -262,7 +241,7 @@
             panel2.Location = new Point(186, 45);
             panel2.Name = "panel2";
             panel2.Size = new Size(730, 192);
-            panel2.TabIndex = 8;
+            panel2.TabIndex = 0;
             // 
             // userSaveButton
             // 
@@ -283,6 +262,7 @@
             userPasswordTextBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
             userPasswordTextBox.Location = new Point(464, 37);
             userPasswordTextBox.Name = "userPasswordTextBox";
+            userPasswordTextBox.PasswordChar = '*';
             userPasswordTextBox.Size = new Size(262, 32);
             userPasswordTextBox.TabIndex = 1;
             // 
@@ -292,7 +272,7 @@
             userPhoneTextBox.Location = new Point(118, 121);
             userPhoneTextBox.Multiline = true;
             userPhoneTextBox.Name = "userPhoneTextBox";
-            userPhoneTextBox.Size = new Size(216, 28);
+            userPhoneTextBox.Size = new Size(216, 32);
             userPhoneTextBox.TabIndex = 2;
             // 
             // userUsernameTextBox
@@ -356,6 +336,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(730, 318);
             dataGridView1.TabIndex = 11;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             // 
             // label16
             // 
@@ -387,7 +368,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -404,7 +384,6 @@
 
         private Panel panel1;
         private Label userLeftMenuLogoutLabelClick;
-        private Label userLeftMenuDashboardLabelClick;
         private Label userLeftMenuTreatmentLabelClick;
         private Label userLeftMenuPrescriptionLabelClick;
         private Label userLeftMenuAppointmentLabelClick;
@@ -412,7 +391,6 @@
         private Label userLeftMenuHeader;
         private Label userLeftMenuSubHeader;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;

@@ -87,12 +87,71 @@ namespace DentalClinicApp
             table.Columns.Add("Date", typeof(DateTime));
             table.Columns.Add("Time", typeof(DateTime));
             appointmentsDataGridView.DataSource = table;
+
+            foreach (DataColumn column in table.Columns)
+            {
+                column.ReadOnly = true;
+            }
+
             for (int i = 0; i < appointments.Count; i++)
             {
                 table.Rows.Add(appointments[i].Id, appointments[i].Patient, appointments[i].Treatment, appointments[i].Date, appointments[i].Time);
             }
         }
+        private void appointmentsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            patientComboBox.Text = appointmentsDataGridView.CurrentRow.Cells[1].Value.ToString();
+            treatmentComboBox.Text = appointmentsDataGridView.CurrentRow.Cells[2].Value.ToString();
+            appointmentsDateTimePicker.Text = appointmentsDataGridView.CurrentRow.Cells[3].Value.ToString();
+            appointmentsTimePicker.Text = appointmentsDataGridView.CurrentRow.Cells[4].Value.ToString();
+        }
+        private void appointmentsLeftMenuPatientLabel_Click(object sender, EventArgs e)
+        {
+            PatientForm patientForm = new PatientForm();
+            patientForm.Show();
+            this.Close();
+        }
 
+        private void appointmentsLeftMenuTreatmentLabel_Click(object sender, EventArgs e)
+        {
+            TreatmentForm treatmentForm = new TreatmentForm();
+            treatmentForm.Show();
+            this.Close();
+        }
+
+        private void appointmentsLeftMenuPrescriptionLabel_Click(object sender, EventArgs e)
+        {
+            PrescriptionForm prescriptionForm = new PrescriptionForm();
+            prescriptionForm.Show();
+            this.Close();
+        }
+
+        private void appointmentsLeftMenuUserLabel_Click(object sender, EventArgs e)
+        {
+            UserForm userForm = new UserForm();
+            userForm.Show();
+            this.Close();
+        }
+
+        private void appointmentsLeftMenuLogoutLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void appointmentDeleteButton_Click(object sender, EventArgs e)
+        {
+            List<Appointment> appointments = appointmentManager.GetListAll();
+            Appointment appointmentDelete = appointments.Find(i => i.Patient == patientComboBox.Text);
+            if (appointmentDelete != null) 
+            {
+                appointmentManager.Delete(appointmentDelete);
+                FillDataGrid();
+            }
+            else
+            {
+                MessageBox.Show("There is no patient named " + patientComboBox.Text);
+            }
+        }
     }
 
 }

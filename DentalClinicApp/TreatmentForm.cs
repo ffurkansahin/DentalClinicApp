@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Entities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace DentalClinicApp
     public partial class TreatmentForm : Form
     {
         TreatmentManager treatmentManager = new TreatmentManager(new EfTreatmentDAL());
+        UserManager userManager = new UserManager(new EfUserDAL());
 
         public TreatmentForm()
         {
@@ -66,6 +68,11 @@ namespace DentalClinicApp
             dt.Columns.Add("Cost", typeof(decimal));
             dt.Columns.Add("Description", typeof(string));
 
+            foreach (DataColumn column in dt.Columns)
+            {
+                column.ReadOnly = true;
+            }
+
             foreach (var item in treatments)
             {
                 dt.Rows.Add(item.Id, item.Name, item.Cost, item.Description);
@@ -73,5 +80,59 @@ namespace DentalClinicApp
             dataGridView1.DataSource = dt;
         }
 
+        private void treatmentLeftMenuPatientClickLabel_Click(object sender, EventArgs e)
+        {
+            PatientForm patientForm = new PatientForm();
+            patientForm.Show();
+            this.Close();
+        }
+
+        private void treatmentLeftMenuAppointmentClickLabel_Click(object sender, EventArgs e)
+        {
+            AppointmentForm appointmentForm = new AppointmentForm();
+            appointmentForm.Show();
+            this.Close();
+        }
+
+        private void treatmentLeftMenuPrescriptionClickLabel_Click(object sender, EventArgs e)
+        {
+            PrescriptionForm prescriptionForm = new PrescriptionForm();
+            prescriptionForm.Show();
+            this.Close();
+        }
+
+        private void treatmentLeftMenuUserClickLabel_Click(object sender, EventArgs e)
+        {
+            UserForm userForm = new UserForm();
+            userForm.Show();
+            this.Close();
+        }
+
+        private void treatmentLeftMenuLogoutClickLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            treatmentNameTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            treatmentCostTextBox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            treatmentDescriptionTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void treatmentsDeleteButton_Click(object sender, EventArgs e)
+        {
+            List<Treatment> treatments = treatmentManager.GetListAll();
+            Treatment treatmentsDelete= treatments.Find(i => i.Name == treatmentNameTextBox.Text);
+            if(treatmentsDelete != null)
+            {
+                treatmentManager.Delete(treatmentsDelete);
+                FillDataGrid();
+            }
+            else
+            {
+                MessageBox.Show("There is no treatment named " + treatmentNameTextBox.Text);
+            }
+        }
     }
 }

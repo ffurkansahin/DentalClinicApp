@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
             panel1 = new Panel();
             patientLeftMenuLogoutClickLabel = new Label();
-            patientLeftMenuDashboardClickLabel = new Label();
             patientLeftMenuUserClickLabel = new Label();
             patientLeftMenuPrescriptionClickLabel = new Label();
             patientLeftMenuTreatmentClickLabel = new Label();
@@ -39,7 +38,6 @@
             patientLeftMenuHeader = new Label();
             patientLeftMenuSubHeader = new Label();
             pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -52,6 +50,7 @@
             patientAddressTextBox = new TextBox();
             patientPhoneTextBox = new TextBox();
             patientNameTextBox = new TextBox();
+            patientDeleteButton = new Button();
             patientSaveButton = new Button();
             patientBirthDateTimePicker = new DateTimePicker();
             patientAllergiesLabel = new Label();
@@ -64,7 +63,6 @@
             label16 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -78,7 +76,6 @@
             // 
             panel1.BackColor = Color.Aquamarine;
             panel1.Controls.Add(patientLeftMenuLogoutClickLabel);
-            panel1.Controls.Add(patientLeftMenuDashboardClickLabel);
             panel1.Controls.Add(patientLeftMenuUserClickLabel);
             panel1.Controls.Add(patientLeftMenuPrescriptionClickLabel);
             panel1.Controls.Add(patientLeftMenuTreatmentClickLabel);
@@ -86,7 +83,6 @@
             panel1.Controls.Add(patientLeftMenuHeader);
             panel1.Controls.Add(patientLeftMenuSubHeader);
             panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox3);
@@ -103,22 +99,12 @@
             patientLeftMenuLogoutClickLabel.AutoSize = true;
             patientLeftMenuLogoutClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             patientLeftMenuLogoutClickLabel.ForeColor = Color.Black;
-            patientLeftMenuLogoutClickLabel.Location = new Point(57, 469);
+            patientLeftMenuLogoutClickLabel.Location = new Point(57, 396);
             patientLeftMenuLogoutClickLabel.Name = "patientLeftMenuLogoutClickLabel";
             patientLeftMenuLogoutClickLabel.Size = new Size(72, 25);
             patientLeftMenuLogoutClickLabel.TabIndex = 4;
             patientLeftMenuLogoutClickLabel.Text = "Logout";
-            // 
-            // patientLeftMenuDashboardClickLabel
-            // 
-            patientLeftMenuDashboardClickLabel.AutoSize = true;
-            patientLeftMenuDashboardClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            patientLeftMenuDashboardClickLabel.ForeColor = Color.Black;
-            patientLeftMenuDashboardClickLabel.Location = new Point(57, 395);
-            patientLeftMenuDashboardClickLabel.Name = "patientLeftMenuDashboardClickLabel";
-            patientLeftMenuDashboardClickLabel.Size = new Size(105, 25);
-            patientLeftMenuDashboardClickLabel.TabIndex = 4;
-            patientLeftMenuDashboardClickLabel.Text = "Dashboard";
+            patientLeftMenuLogoutClickLabel.Click += patientLeftMenuLogoutClickLabel_Click;
             // 
             // patientLeftMenuUserClickLabel
             // 
@@ -130,6 +116,7 @@
             patientLeftMenuUserClickLabel.Size = new Size(58, 25);
             patientLeftMenuUserClickLabel.TabIndex = 4;
             patientLeftMenuUserClickLabel.Text = "Users";
+            patientLeftMenuUserClickLabel.Click += patientLeftMenuUserClickLabel_Click;
             // 
             // patientLeftMenuPrescriptionClickLabel
             // 
@@ -141,6 +128,7 @@
             patientLeftMenuPrescriptionClickLabel.Size = new Size(114, 25);
             patientLeftMenuPrescriptionClickLabel.TabIndex = 4;
             patientLeftMenuPrescriptionClickLabel.Text = "Prescription";
+            patientLeftMenuPrescriptionClickLabel.Click += patientLeftMenuPrescriptionClickLabel_Click;
             // 
             // patientLeftMenuTreatmentClickLabel
             // 
@@ -152,6 +140,7 @@
             patientLeftMenuTreatmentClickLabel.Size = new Size(99, 25);
             patientLeftMenuTreatmentClickLabel.TabIndex = 4;
             patientLeftMenuTreatmentClickLabel.Text = "Treatment";
+            patientLeftMenuTreatmentClickLabel.Click += patientLeftMenuTreatmentClickLabel_Click;
             // 
             // patientLeftMenuAppointmentClickLabel
             // 
@@ -163,6 +152,7 @@
             patientLeftMenuAppointmentClickLabel.Size = new Size(126, 25);
             patientLeftMenuAppointmentClickLabel.TabIndex = 4;
             patientLeftMenuAppointmentClickLabel.Text = "Appointment";
+            patientLeftMenuAppointmentClickLabel.Click += patientLeftMenuAppointmentClickLabel_Click;
             // 
             // patientLeftMenuHeader
             // 
@@ -189,22 +179,12 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 455);
+            pictureBox7.Location = new Point(3, 382);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(48, 49);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 2;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(3, 381);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(48, 49);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 2;
-            pictureBox6.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -274,6 +254,7 @@
             panel2.Controls.Add(patientAddressTextBox);
             panel2.Controls.Add(patientPhoneTextBox);
             panel2.Controls.Add(patientNameTextBox);
+            panel2.Controls.Add(patientDeleteButton);
             panel2.Controls.Add(patientSaveButton);
             panel2.Controls.Add(patientBirthDateTimePicker);
             panel2.Controls.Add(patientAllergiesLabel);
@@ -331,15 +312,29 @@
             patientNameTextBox.Size = new Size(159, 32);
             patientNameTextBox.TabIndex = 0;
             // 
+            // patientDeleteButton
+            // 
+            patientDeleteButton.BackColor = Color.Aquamarine;
+            patientDeleteButton.FlatStyle = FlatStyle.Flat;
+            patientDeleteButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            patientDeleteButton.ForeColor = Color.Black;
+            patientDeleteButton.Location = new Point(354, 140);
+            patientDeleteButton.Name = "patientDeleteButton";
+            patientDeleteButton.Size = new Size(84, 44);
+            patientDeleteButton.TabIndex = 7;
+            patientDeleteButton.Text = "Delete";
+            patientDeleteButton.UseVisualStyleBackColor = false;
+            patientDeleteButton.Click += patientDeleteButton_Click;
+            // 
             // patientSaveButton
             // 
             patientSaveButton.BackColor = Color.Aquamarine;
             patientSaveButton.FlatStyle = FlatStyle.Flat;
             patientSaveButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             patientSaveButton.ForeColor = Color.Black;
-            patientSaveButton.Location = new Point(306, 141);
+            patientSaveButton.Location = new Point(257, 140);
             patientSaveButton.Name = "patientSaveButton";
-            patientSaveButton.Size = new Size(132, 44);
+            patientSaveButton.Size = new Size(91, 44);
             patientSaveButton.TabIndex = 6;
             patientSaveButton.Text = "Save";
             patientSaveButton.UseVisualStyleBackColor = false;
@@ -428,6 +423,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(730, 318);
             dataGridView1.TabIndex = 7;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             // 
             // label16
             // 
@@ -459,7 +455,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -476,7 +471,6 @@
 
         private Panel panel1;
         private Label patientLeftMenuLogoutClickLabel;
-        private Label patientLeftMenuDashboardClickLabel;
         private Label patientLeftMenuUserClickLabel;
         private Label patientLeftMenuPrescriptionClickLabel;
         private Label patientLeftMenuTreatmentClickLabel;
@@ -484,7 +478,6 @@
         private Label patientLeftMenuHeader;
         private Label patientLeftMenuSubHeader;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
@@ -507,5 +500,6 @@
         private TextBox patientAllergiesTextBox;
         private DataGridView dataGridView1;
         private Label label16;
+        private Button patientDeleteButton;
     }
 }

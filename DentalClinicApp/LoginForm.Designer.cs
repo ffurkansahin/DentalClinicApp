@@ -106,6 +106,7 @@
             passwordTextBox.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             passwordTextBox.Location = new Point(162, 234);
             passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PasswordChar = '*';
             passwordTextBox.Size = new Size(222, 35);
             passwordTextBox.TabIndex = 1;
             // 
@@ -130,12 +131,12 @@
             signupButton.Location = new Point(12, 305);
             signupButton.Name = "signupButton";
             signupButton.Size = new Size(104, 40);
-            signupButton.TabIndex = 2;
+            signupButton.TabIndex = 3;
             signupButton.Text = "Sign Up";
             signupButton.UseVisualStyleBackColor = false;
             signupButton.Click += signupButton_Click;
             // 
-            // Login
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -150,9 +151,10 @@
             Controls.Add(LoginLabel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "Login";
+            Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += LoginForm_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

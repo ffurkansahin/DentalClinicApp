@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentForm));
             panel1 = new Panel();
             appointmentsLeftMenuLogoutLabel = new Label();
-            appointmentsLeftMenuDashboardLabel = new Label();
             appointmentsLeftMenuUserLabel = new Label();
             appointmentsLeftMenuPrescriptionLabel = new Label();
             appointmentsLeftMenuTreatmentLabel = new Label();
@@ -39,7 +38,6 @@
             appointmentsHeaderLabel = new Label();
             appointmentsSubHeader = new Label();
             pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -47,6 +45,7 @@
             pictureBox1 = new PictureBox();
             label9 = new Label();
             panel2 = new Panel();
+            appointmentDeleteButton = new Button();
             appointmentsSaveButton = new Button();
             appointmentsTimePicker = new DateTimePicker();
             appointmentsDateTimePicker = new DateTimePicker();
@@ -60,7 +59,6 @@
             appointmentsDataGridViewPatientLabel = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -74,7 +72,6 @@
             // 
             panel1.BackColor = Color.Aquamarine;
             panel1.Controls.Add(appointmentsLeftMenuLogoutLabel);
-            panel1.Controls.Add(appointmentsLeftMenuDashboardLabel);
             panel1.Controls.Add(appointmentsLeftMenuUserLabel);
             panel1.Controls.Add(appointmentsLeftMenuPrescriptionLabel);
             panel1.Controls.Add(appointmentsLeftMenuTreatmentLabel);
@@ -82,7 +79,6 @@
             panel1.Controls.Add(appointmentsHeaderLabel);
             panel1.Controls.Add(appointmentsSubHeader);
             panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox3);
@@ -99,22 +95,12 @@
             appointmentsLeftMenuLogoutLabel.AutoSize = true;
             appointmentsLeftMenuLogoutLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             appointmentsLeftMenuLogoutLabel.ForeColor = Color.Black;
-            appointmentsLeftMenuLogoutLabel.Location = new Point(57, 469);
+            appointmentsLeftMenuLogoutLabel.Location = new Point(57, 395);
             appointmentsLeftMenuLogoutLabel.Name = "appointmentsLeftMenuLogoutLabel";
             appointmentsLeftMenuLogoutLabel.Size = new Size(72, 25);
             appointmentsLeftMenuLogoutLabel.TabIndex = 4;
             appointmentsLeftMenuLogoutLabel.Text = "Logout";
-            // 
-            // appointmentsLeftMenuDashboardLabel
-            // 
-            appointmentsLeftMenuDashboardLabel.AutoSize = true;
-            appointmentsLeftMenuDashboardLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            appointmentsLeftMenuDashboardLabel.ForeColor = Color.Black;
-            appointmentsLeftMenuDashboardLabel.Location = new Point(57, 395);
-            appointmentsLeftMenuDashboardLabel.Name = "appointmentsLeftMenuDashboardLabel";
-            appointmentsLeftMenuDashboardLabel.Size = new Size(105, 25);
-            appointmentsLeftMenuDashboardLabel.TabIndex = 4;
-            appointmentsLeftMenuDashboardLabel.Text = "Dashboard";
+            appointmentsLeftMenuLogoutLabel.Click += appointmentsLeftMenuLogoutLabel_Click;
             // 
             // appointmentsLeftMenuUserLabel
             // 
@@ -126,6 +112,7 @@
             appointmentsLeftMenuUserLabel.Size = new Size(58, 25);
             appointmentsLeftMenuUserLabel.TabIndex = 4;
             appointmentsLeftMenuUserLabel.Text = "Users";
+            appointmentsLeftMenuUserLabel.Click += appointmentsLeftMenuUserLabel_Click;
             // 
             // appointmentsLeftMenuPrescriptionLabel
             // 
@@ -137,6 +124,7 @@
             appointmentsLeftMenuPrescriptionLabel.Size = new Size(114, 25);
             appointmentsLeftMenuPrescriptionLabel.TabIndex = 4;
             appointmentsLeftMenuPrescriptionLabel.Text = "Prescription";
+            appointmentsLeftMenuPrescriptionLabel.Click += appointmentsLeftMenuPrescriptionLabel_Click;
             // 
             // appointmentsLeftMenuTreatmentLabel
             // 
@@ -148,6 +136,7 @@
             appointmentsLeftMenuTreatmentLabel.Size = new Size(99, 25);
             appointmentsLeftMenuTreatmentLabel.TabIndex = 4;
             appointmentsLeftMenuTreatmentLabel.Text = "Treatment";
+            appointmentsLeftMenuTreatmentLabel.Click += appointmentsLeftMenuTreatmentLabel_Click;
             // 
             // appointmentsLeftMenuPatientLabel
             // 
@@ -159,6 +148,7 @@
             appointmentsLeftMenuPatientLabel.Size = new Size(72, 25);
             appointmentsLeftMenuPatientLabel.TabIndex = 4;
             appointmentsLeftMenuPatientLabel.Text = "Patient";
+            appointmentsLeftMenuPatientLabel.Click += appointmentsLeftMenuPatientLabel_Click;
             // 
             // appointmentsHeaderLabel
             // 
@@ -185,22 +175,12 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 455);
+            pictureBox7.Location = new Point(3, 382);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(48, 49);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 2;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(3, 381);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(48, 49);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 2;
-            pictureBox6.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -265,6 +245,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(appointmentDeleteButton);
             panel2.Controls.Add(appointmentsSaveButton);
             panel2.Controls.Add(appointmentsTimePicker);
             panel2.Controls.Add(appointmentsDateTimePicker);
@@ -278,6 +259,19 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(730, 192);
             panel2.TabIndex = 4;
+            // 
+            // appointmentDeleteButton
+            // 
+            appointmentDeleteButton.BackColor = Color.Aquamarine;
+            appointmentDeleteButton.FlatStyle = FlatStyle.Flat;
+            appointmentDeleteButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            appointmentDeleteButton.Location = new Point(535, 141);
+            appointmentDeleteButton.Name = "appointmentDeleteButton";
+            appointmentDeleteButton.Size = new Size(132, 44);
+            appointmentDeleteButton.TabIndex = 5;
+            appointmentDeleteButton.Text = "Delete";
+            appointmentDeleteButton.UseVisualStyleBackColor = false;
+            appointmentDeleteButton.Click += appointmentDeleteButton_Click;
             // 
             // appointmentsSaveButton
             // 
@@ -381,17 +375,18 @@
             appointmentsDataGridView.RowTemplate.Height = 25;
             appointmentsDataGridView.Size = new Size(730, 318);
             appointmentsDataGridView.TabIndex = 5;
+            appointmentsDataGridView.CellMouseClick += appointmentsDataGridView_CellMouseClick;
             // 
             // appointmentsDataGridViewPatientLabel
             // 
             appointmentsDataGridViewPatientLabel.AutoSize = true;
             appointmentsDataGridViewPatientLabel.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             appointmentsDataGridViewPatientLabel.ForeColor = Color.MediumVioletRed;
-            appointmentsDataGridViewPatientLabel.Location = new Point(513, 240);
+            appointmentsDataGridViewPatientLabel.Location = new Point(473, 240);
             appointmentsDataGridViewPatientLabel.Name = "appointmentsDataGridViewPatientLabel";
-            appointmentsDataGridViewPatientLabel.Size = new Size(25, 30);
+            appointmentsDataGridViewPatientLabel.Size = new Size(150, 30);
             appointmentsDataGridViewPatientLabel.TabIndex = 3;
-            appointmentsDataGridViewPatientLabel.Text = "  ";
+            appointmentsDataGridViewPatientLabel.Text = "Appointments";
             // 
             // AppointmentForm
             // 
@@ -412,7 +407,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -438,10 +432,8 @@
         private Label appointmentsLeftMenuUserLabel;
         private PictureBox pictureBox4;
         private Label appointmentsLeftMenuLogoutLabel;
-        private Label appointmentsLeftMenuDashboardLabel;
         private Label appointmentsLeftMenuPrescriptionLabel;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private Label label9;
         private Panel panel2;
@@ -457,5 +449,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private DataGridView appointmentsDataGridView;
         private Label appointmentsDataGridViewPatientLabel;
+        private Button appointmentDeleteButton;
     }
 }

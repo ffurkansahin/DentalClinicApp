@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrescriptionForm));
             panel1 = new Panel();
             prescriptionLeftMenuLogoutClickLabel = new Label();
-            prescriptionLeftMenuDashboardClickLabel = new Label();
             prescriptionLeftMenuUserClickLabel = new Label();
             prescriptionLeftMenuAppointmentClickLabel = new Label();
             prescriptionLeftMenuTreatmentClickLabel = new Label();
@@ -39,7 +38,6 @@
             prescriptionLeftMenuHeader = new Label();
             prescriptionLeftMenuSubHeader = new Label();
             pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -52,6 +50,7 @@
             prescriptionMedicinesTextBox = new TextBox();
             prescriptionTreatmentTextBox = new TextBox();
             prescriptionNameTextBox = new TextBox();
+            prescriptionDeleteButton = new Button();
             prescriptionSaveButton = new Button();
             prescriptionQuantityLabel = new Label();
             prescriptionCostLabel = new Label();
@@ -60,22 +59,23 @@
             prescriptionTreatmentLabel = new Label();
             prescriptionNameLabel = new Label();
             label9 = new Label();
+            dataGridView1 = new DataGridView();
+            label16 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Aquamarine;
             panel1.Controls.Add(prescriptionLeftMenuLogoutClickLabel);
-            panel1.Controls.Add(prescriptionLeftMenuDashboardClickLabel);
             panel1.Controls.Add(prescriptionLeftMenuUserClickLabel);
             panel1.Controls.Add(prescriptionLeftMenuAppointmentClickLabel);
             panel1.Controls.Add(prescriptionLeftMenuTreatmentClickLabel);
@@ -83,7 +83,6 @@
             panel1.Controls.Add(prescriptionLeftMenuHeader);
             panel1.Controls.Add(prescriptionLeftMenuSubHeader);
             panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox3);
@@ -100,22 +99,12 @@
             prescriptionLeftMenuLogoutClickLabel.AutoSize = true;
             prescriptionLeftMenuLogoutClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             prescriptionLeftMenuLogoutClickLabel.ForeColor = Color.Black;
-            prescriptionLeftMenuLogoutClickLabel.Location = new Point(57, 469);
+            prescriptionLeftMenuLogoutClickLabel.Location = new Point(57, 395);
             prescriptionLeftMenuLogoutClickLabel.Name = "prescriptionLeftMenuLogoutClickLabel";
             prescriptionLeftMenuLogoutClickLabel.Size = new Size(72, 25);
             prescriptionLeftMenuLogoutClickLabel.TabIndex = 4;
             prescriptionLeftMenuLogoutClickLabel.Text = "Logout";
-            // 
-            // prescriptionLeftMenuDashboardClickLabel
-            // 
-            prescriptionLeftMenuDashboardClickLabel.AutoSize = true;
-            prescriptionLeftMenuDashboardClickLabel.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            prescriptionLeftMenuDashboardClickLabel.ForeColor = Color.Black;
-            prescriptionLeftMenuDashboardClickLabel.Location = new Point(57, 395);
-            prescriptionLeftMenuDashboardClickLabel.Name = "prescriptionLeftMenuDashboardClickLabel";
-            prescriptionLeftMenuDashboardClickLabel.Size = new Size(105, 25);
-            prescriptionLeftMenuDashboardClickLabel.TabIndex = 4;
-            prescriptionLeftMenuDashboardClickLabel.Text = "Dashboard";
+            prescriptionLeftMenuLogoutClickLabel.Click += prescriptionLeftMenuLogoutClickLabel_Click;
             // 
             // prescriptionLeftMenuUserClickLabel
             // 
@@ -127,6 +116,7 @@
             prescriptionLeftMenuUserClickLabel.Size = new Size(58, 25);
             prescriptionLeftMenuUserClickLabel.TabIndex = 4;
             prescriptionLeftMenuUserClickLabel.Text = "Users";
+            prescriptionLeftMenuUserClickLabel.Click += prescriptionLeftMenuUserClickLabel_Click;
             // 
             // prescriptionLeftMenuAppointmentClickLabel
             // 
@@ -138,6 +128,7 @@
             prescriptionLeftMenuAppointmentClickLabel.Size = new Size(126, 25);
             prescriptionLeftMenuAppointmentClickLabel.TabIndex = 4;
             prescriptionLeftMenuAppointmentClickLabel.Text = "Appointment";
+            prescriptionLeftMenuAppointmentClickLabel.Click += prescriptionLeftMenuAppointmentClickLabel_Click;
             // 
             // prescriptionLeftMenuTreatmentClickLabel
             // 
@@ -149,6 +140,7 @@
             prescriptionLeftMenuTreatmentClickLabel.Size = new Size(99, 25);
             prescriptionLeftMenuTreatmentClickLabel.TabIndex = 4;
             prescriptionLeftMenuTreatmentClickLabel.Text = "Treatment";
+            prescriptionLeftMenuTreatmentClickLabel.Click += prescriptionLeftMenuTreatmentClickLabel_Click;
             // 
             // prescriptionLeftMenuPatientClickLabel
             // 
@@ -160,6 +152,7 @@
             prescriptionLeftMenuPatientClickLabel.Size = new Size(72, 25);
             prescriptionLeftMenuPatientClickLabel.TabIndex = 4;
             prescriptionLeftMenuPatientClickLabel.Text = "Patient";
+            prescriptionLeftMenuPatientClickLabel.Click += prescriptionLeftMenuPatientClickLabel_Click;
             // 
             // prescriptionLeftMenuHeader
             // 
@@ -186,22 +179,12 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 455);
+            pictureBox7.Location = new Point(3, 381);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(48, 49);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 2;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(3, 381);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(48, 49);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 2;
-            pictureBox6.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -261,6 +244,7 @@
             panel2.Controls.Add(prescriptionMedicinesTextBox);
             panel2.Controls.Add(prescriptionTreatmentTextBox);
             panel2.Controls.Add(prescriptionNameTextBox);
+            panel2.Controls.Add(prescriptionDeleteButton);
             panel2.Controls.Add(prescriptionSaveButton);
             panel2.Controls.Add(prescriptionQuantityLabel);
             panel2.Controls.Add(prescriptionCostLabel);
@@ -287,17 +271,16 @@
             prescriptionCostTextBox.Location = new Point(444, 52);
             prescriptionCostTextBox.Name = "prescriptionCostTextBox";
             prescriptionCostTextBox.Size = new Size(223, 32);
-            prescriptionCostTextBox.TabIndex = 3;
+            prescriptionCostTextBox.TabIndex = 4;
             // 
             // prescriptionPatientComboBox
             // 
             prescriptionPatientComboBox.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
             prescriptionPatientComboBox.FormattingEnabled = true;
-            prescriptionPatientComboBox.Items.AddRange(new object[] { "Male", "Female" });
             prescriptionPatientComboBox.Location = new Point(444, 8);
             prescriptionPatientComboBox.Name = "prescriptionPatientComboBox";
             prescriptionPatientComboBox.Size = new Size(223, 33);
-            prescriptionPatientComboBox.TabIndex = 1;
+            prescriptionPatientComboBox.TabIndex = 3;
             // 
             // prescriptionMedicinesTextBox
             // 
@@ -306,7 +289,7 @@
             prescriptionMedicinesTextBox.Multiline = true;
             prescriptionMedicinesTextBox.Name = "prescriptionMedicinesTextBox";
             prescriptionMedicinesTextBox.Size = new Size(159, 93);
-            prescriptionMedicinesTextBox.TabIndex = 4;
+            prescriptionMedicinesTextBox.TabIndex = 2;
             // 
             // prescriptionTreatmentTextBox
             // 
@@ -314,7 +297,7 @@
             prescriptionTreatmentTextBox.Location = new Point(106, 48);
             prescriptionTreatmentTextBox.Name = "prescriptionTreatmentTextBox";
             prescriptionTreatmentTextBox.Size = new Size(159, 32);
-            prescriptionTreatmentTextBox.TabIndex = 2;
+            prescriptionTreatmentTextBox.TabIndex = 1;
             // 
             // prescriptionNameTextBox
             // 
@@ -323,6 +306,20 @@
             prescriptionNameTextBox.Name = "prescriptionNameTextBox";
             prescriptionNameTextBox.Size = new Size(159, 32);
             prescriptionNameTextBox.TabIndex = 0;
+            // 
+            // prescriptionDeleteButton
+            // 
+            prescriptionDeleteButton.BackColor = Color.Aquamarine;
+            prescriptionDeleteButton.FlatStyle = FlatStyle.Flat;
+            prescriptionDeleteButton.Font = new Font("Yu Gothic UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            prescriptionDeleteButton.ForeColor = Color.Black;
+            prescriptionDeleteButton.Location = new Point(514, 141);
+            prescriptionDeleteButton.Name = "prescriptionDeleteButton";
+            prescriptionDeleteButton.Size = new Size(132, 44);
+            prescriptionDeleteButton.TabIndex = 7;
+            prescriptionDeleteButton.Text = "Delete";
+            prescriptionDeleteButton.UseVisualStyleBackColor = false;
+            prescriptionDeleteButton.Click += prescriptionDeleteButton_Click;
             // 
             // prescriptionSaveButton
             // 
@@ -336,6 +333,7 @@
             prescriptionSaveButton.TabIndex = 6;
             prescriptionSaveButton.Text = "Save";
             prescriptionSaveButton.UseVisualStyleBackColor = false;
+            prescriptionSaveButton.Click += prescriptionSaveButton_Click;
             // 
             // prescriptionQuantityLabel
             // 
@@ -414,23 +412,47 @@
             label9.TabIndex = 6;
             label9.Text = "Prescriptions";
             // 
-            // Prescription
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(188, 271);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(730, 318);
+            dataGridView1.TabIndex = 11;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.ForeColor = Color.MediumVioletRed;
+            label16.Location = new Point(477, 238);
+            label16.Name = "label16";
+            label16.Size = new Size(136, 30);
+            label16.TabIndex = 10;
+            label16.Text = "Prescriptions";
+            // 
+            // PrescriptionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(926, 600);
+            Controls.Add(dataGridView1);
+            Controls.Add(label16);
             Controls.Add(panel2);
             Controls.Add(label9);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "Prescription";
+            Name = "PrescriptionForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Note";
+            Load += PrescriptionForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -438,6 +460,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -446,7 +469,6 @@
 
         private Panel panel1;
         private Label prescriptionLeftMenuLogoutClickLabel;
-        private Label prescriptionLeftMenuDashboardClickLabel;
         private Label prescriptionLeftMenuUserClickLabel;
         private Label prescriptionLeftMenuAppointmentClickLabel;
         private Label prescriptionLeftMenuTreatmentClickLabel;
@@ -454,7 +476,6 @@
         private Label prescriptionLeftMenuHeader;
         private Label prescriptionLeftMenuSubHeader;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
@@ -475,5 +496,8 @@
         private ComboBox prescriptionPatientComboBox;
         private TextBox prescriptionQuantityTextBox;
         private TextBox prescriptionCostTextBox;
+        private DataGridView dataGridView1;
+        private Label label16;
+        private Button prescriptionDeleteButton;
     }
 }

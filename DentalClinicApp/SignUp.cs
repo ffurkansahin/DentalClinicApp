@@ -1,8 +1,10 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
+using BusinessLayer.Validator;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Entities;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,28 +28,34 @@ namespace UIDentalClinicApp
         {
             UserManager userManager = new UserManager(new EfUserDAL());
             List<Users> users = userManager.GetListAll();
-
-            if ((users.Find(i => i.Username == SignUpUsernameTextBox.Text)) == null)
+            Users userAdd = new Users
             {
-                if (SignUpPasswordTextBox.Text == SignUpPasswordAgainTextBox.Text)
+                Username = SignUpUsernameTextBox.Text,
+                Password = SignUpPasswordAgainTextBox.Text,
+                Phone = signUpPhoneTextBox.Text
+            };
+            UserValidator validationRules = new UserValidator();
+            ValidationResult validationResult = validationRules.Validate(userAdd);
+            if (validationResult.IsValid)
+            {
+                if (users.Find(i => i.Username == userAdd.Username) == null)
                 {
-                    Users user = new Users { Username = SignUpUsernameTextBox.Text, Password = SignUpPasswordAgainTextBox.Text, Phone = signUpPhoneTextBox.Text };
-                    userManager.Insert(user);
-                    MessageBox.Show("Success");
-                    this.Close();
+                    userManager.Insert(userAdd);
+                    MessageBox.Show("User added succesfully");
                 }
                 else
                 {
-                    MessageBox.Show("Passwords should be match");
+                    MessageBox.Show("This username already in use");
                 }
+
             }
             else
             {
-                MessageBox.Show("This username has taken");
+                foreach(var item in validationResult.Errors) 
+                {
+                    MessageBox.Show(item.ErrorMessage);
+                }
             }
-
-
-
         }
     }
 }
